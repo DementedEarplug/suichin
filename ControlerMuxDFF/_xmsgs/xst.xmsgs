@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">103</arg>. Type of <arg fmt="%s" index="3">f2</arg> is incompatible with type of <arg fmt="%s" index="4">or</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">104</arg>. Type of <arg fmt="%s" index="3">f3</arg> is incompatible with type of <arg fmt="%s" index="4">and</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="808" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">105</arg>. <arg fmt="%s" index="3">=</arg> can not have such operands in this context.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">106</arg>. Type of <arg fmt="%s" index="3">f5</arg> is incompatible with type of <arg fmt="%s" index="4">and</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">107</arg>. Type of <arg fmt="%s" index="3">f6</arg> is incompatible with type of <arg fmt="%s" index="4">and</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">109</arg>. Type of <arg fmt="%s" index="3">Da</arg> is incompatible with type of <arg fmt="%s" index="4">or</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">110</arg>. Type of <arg fmt="%s" index="3">Db</arg> is incompatible with type of <arg fmt="%s" index="4">or</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">111</arg>. Type of <arg fmt="%s" index="3">Dc</arg> is incompatible with type of <arg fmt="%s" index="4">or</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">113</arg>. Type of <arg fmt="%s" index="3">m1Sel</arg> is incompatible with type of <arg fmt="%s" index="4">or</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">114</arg>. Type of <arg fmt="%s" index="3">m1Sel</arg> is incompatible with type of <arg fmt="%s" index="4">and</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">115</arg>. Type of <arg fmt="%s" index="3">m2Sel</arg> is incompatible with type of <arg fmt="%s" index="4">and</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">116</arg>. Type of <arg fmt="%s" index="3">m2Sel</arg> is incompatible with type of <arg fmt="%s" index="4">and</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">117</arg>. Type of <arg fmt="%s" index="3">m2Sel</arg> is incompatible with type of <arg fmt="%s" index="4">or</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">118</arg>. Type of <arg fmt="%s" index="3">m3Sel</arg> is incompatible with type of <arg fmt="%s" index="4">or</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">119</arg>. Type of <arg fmt="%s" index="3">m3Sel</arg> is incompatible with type of <arg fmt="%s" index="4">and</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">121</arg>. Type of <arg fmt="%s" index="3">startdelay</arg> is incompatible with type of <arg fmt="%s" index="4">or</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">122</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">nEnddlay</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3313" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">149</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">nEnddelay</arg>&apos;.  Should it be: <arg fmt="%s" index="4">Enddelay</arg>?
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">149</arg>. <arg fmt="%s" index="3">nEnddelay</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="800" delta="old" >&quot;<arg fmt="%s" index="1">/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd</arg>&quot; Line <arg fmt="%d" index="2">153</arg>. Type of <arg fmt="%s" index="3">Leds</arg> is incompatible with type of <arg fmt="%s" index="4">&apos;0&apos;</arg>.
+</msg>
+
+</messages>
+

@@ -1,0 +1,8 @@
+V3 5
+FL /home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd 2019/11/04.11:04:14 P.20131013
+EN work/ControllerMuxDFF 0 \
+      FL /home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ControllerMuxDFF/Behavioral 0 \
+      FL /home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd \
+      EN work/ControllerMuxDFF 0 CP dflipflop CP mux4to1

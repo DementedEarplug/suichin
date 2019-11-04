@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerMuxDFF.xst" -ofn "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerMuxDFF.syr" 
+xst -intstyle ise -ifn "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerMuxDFF.xst" -ofn "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerMuxDFF.syr" 
