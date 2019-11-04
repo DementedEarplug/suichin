@@ -1,0 +1,228 @@
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+vhdtdtfi -prj Components -o /home/ubuntu/Components/Logical_Components.vhi -module Logical_Components -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Logical_Components.vhd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Logical_Components.ut Logical_Components.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+xst -intstyle ise -ifn "/home/ubuntu/Components/Logical_Components.xst" -ofn "/home/ubuntu/Components/Logical_Components.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 Logical_Components.ngc Logical_Components.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Logical_Components_map.ncd Logical_Components.ngd Logical_Components.pcf 
+par -w -intstyle ise -ol high -t 1 Logical_Components_map.ncd Logical_Components.ncd Logical_Components.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf 

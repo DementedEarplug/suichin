@@ -1,0 +1,124 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    22:40:22 09/29/2019 
+-- Design Name: 
+-- Module Name:    Logical_Components - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+
+	
+
+	
+
+entity Logical_Components is --This is a 4-to-1 Mux implementation
+    port ( 
+			  A : in std_logic;
+			  B : in std_logic;
+			  C : in std_logic;
+			  Da :in std_logic;
+			  Qa : out std_logic;
+			  Qan : out std_logic;
+           switches : in std_logic_vector(7 downto 0);
+			  CLK : in std_logic;
+			  arm : in              std_logic;
+           doors : in            std_logic;
+           windows : in          std_logic;
+           frontdoor : in        std_logic;
+           enddelay : in         std_logic;
+           test : in             std_logic;			  
+           bell : out std_logic;
+           lights : out std_logic;
+           sendsms : out std_logic;
+           startdelay : out std_logic;
+           LEDs: out std_logic_vector(7 downto 0));	
+     
+
+end Logical_Components;
+
+
+architecture Behavioral of Logical_Components is
+
+    
+    component controller
+        port(
+            Arm : in              std_logic;
+            Doors : in            std_logic;
+            Windows : in          std_logic;
+            Frontdoor : in        std_logic;
+            Enddelay : in         std_logic;
+            Test : in             std_logic;
+				Clk : in					 std_logic;
+            Leds : out            std_logic_vector(7 downto 0);
+            Sendsms : out         std_logic;
+            Bell : out            std_logic;
+            Lights : out          std_logic;
+            Startdelay : out      std_logic
+        );
+    end component;
+	 
+	 component dflipflop
+		  port(
+				d : in std_logic;
+				clk : in std_logic;
+				q : out std_logic;
+				nq : out std_logic
+		  );
+	 end component;
+	 
+	 
+	 
+begin    	
+    
+    Inst_controller: controller port map(
+        Arm => switches(0),
+        Doors => switches(2),
+        Windows => switches(1),
+        Frontdoor => switches(6),
+        Enddelay => switches(3),
+        Test => switches(7),
+		  Clk => CLK,
+        Leds => LEDs,
+        Sendsms => sendsms,
+        Bell => bell,
+        Lights => lights,
+        Startdelay => startdelay
+    );
+	 
+	
+	
+
+	 
+
+	 
+
+	
+end Behavioral;
+
+
+
+
+

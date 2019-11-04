@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ubuntu/Components/Logical_Components.ncd
+OUTFILE=/home/ubuntu/Components/Logical_Components.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=/home/ubuntu/Components
+LICENSE=WebPack
+USER_INFO=211793863_0_0_550

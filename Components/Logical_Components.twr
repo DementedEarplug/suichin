@@ -1,0 +1,482 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 5 -n
+3 -fastpaths -xml Logical_Components.twx Logical_Components.ncd -o
+Logical_Components.twr Logical_Components.pcf -ucf constraints.ucf
+
+Design file:              Logical_Components.ncd
+Physical constraint file: Logical_Components.pcf
+Device,package,speed:     xc3s500e,fg320,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "CLK_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 153 paths analyzed, 58 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.100ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_controller/leds_7 (SLICE_X51Y68.F3), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.900ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/state_0 (FF)
+  Destination:          Inst_controller/leds_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.081ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.019ns (0.010 - 0.029)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_controller/state_0 to Inst_controller/leds_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y52.XQ      Tcko                  0.515   Inst_controller/state<0>
+                                                       Inst_controller/state_0
+    SLICE_X52Y64.G4      net (fanout=23)       1.672   Inst_controller/state<0>
+    SLICE_X52Y64.Y       Tilo                  0.660   Inst_controller/N11
+                                                       Inst_controller/leds_mux0000<3>111_SW0
+    SLICE_X52Y64.F4      net (fanout=2)        0.039   N38
+    SLICE_X52Y64.X       Tilo                  0.660   Inst_controller/N11
+                                                       Inst_controller/leds_mux0000<3>111
+    SLICE_X51Y68.F3      net (fanout=5)        0.807   Inst_controller/N11
+    SLICE_X51Y68.CLK     Tfck                  0.728   Inst_controller/leds<7>
+                                                       Inst_controller/leds_mux0000<0>1
+                                                       Inst_controller/leds_7
+    -------------------------------------------------  ---------------------------
+    Total                                      5.081ns (2.563ns logic, 2.518ns route)
+                                                       (50.4% logic, 49.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.344ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/state_2_1 (FF)
+  Destination:          Inst_controller/leds_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.637ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.019ns (0.010 - 0.029)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_controller/state_2_1 to Inst_controller/leds_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y53.XQ      Tcko                  0.514   Inst_controller/state_2_1
+                                                       Inst_controller/state_2_1
+    SLICE_X52Y64.G1      net (fanout=4)        1.229   Inst_controller/state_2_1
+    SLICE_X52Y64.Y       Tilo                  0.660   Inst_controller/N11
+                                                       Inst_controller/leds_mux0000<3>111_SW0
+    SLICE_X52Y64.F4      net (fanout=2)        0.039   N38
+    SLICE_X52Y64.X       Tilo                  0.660   Inst_controller/N11
+                                                       Inst_controller/leds_mux0000<3>111
+    SLICE_X51Y68.F3      net (fanout=5)        0.807   Inst_controller/N11
+    SLICE_X51Y68.CLK     Tfck                  0.728   Inst_controller/leds<7>
+                                                       Inst_controller/leds_mux0000<0>1
+                                                       Inst_controller/leds_7
+    -------------------------------------------------  ---------------------------
+    Total                                      4.637ns (2.562ns logic, 2.075ns route)
+                                                       (55.3% logic, 44.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.371ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/startedDelay (FF)
+  Destination:          Inst_controller/leds_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.614ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.015ns (0.010 - 0.025)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_controller/startedDelay to Inst_controller/leds_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y56.XQ      Tcko                  0.514   Inst_controller/startedDelay
+                                                       Inst_controller/startedDelay
+    SLICE_X52Y64.G3      net (fanout=10)       1.206   Inst_controller/startedDelay
+    SLICE_X52Y64.Y       Tilo                  0.660   Inst_controller/N11
+                                                       Inst_controller/leds_mux0000<3>111_SW0
+    SLICE_X52Y64.F4      net (fanout=2)        0.039   N38
+    SLICE_X52Y64.X       Tilo                  0.660   Inst_controller/N11
+                                                       Inst_controller/leds_mux0000<3>111
+    SLICE_X51Y68.F3      net (fanout=5)        0.807   Inst_controller/N11
+    SLICE_X51Y68.CLK     Tfck                  0.728   Inst_controller/leds<7>
+                                                       Inst_controller/leds_mux0000<0>1
+                                                       Inst_controller/leds_7
+    -------------------------------------------------  ---------------------------
+    Total                                      4.614ns (2.562ns logic, 2.052ns route)
+                                                       (55.5% logic, 44.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_controller/leds_4 (SLICE_X53Y66.F2), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.927ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/state_1 (FF)
+  Destination:          Inst_controller/leds_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.068ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.005ns (0.015 - 0.020)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_controller/state_1 to Inst_controller/leds_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y60.XQ      Tcko                  0.515   Inst_controller/state<1>
+                                                       Inst_controller/state_1
+    SLICE_X52Y67.G2      net (fanout=26)       1.616   Inst_controller/state<1>
+    SLICE_X52Y67.Y       Tilo                  0.660   N30
+                                                       Inst_controller/leds_mux0000<3>_SW0_SW0_SW0
+    SLICE_X52Y67.F3      net (fanout=1)        0.020   Inst_controller/leds_mux0000<3>_SW0_SW0_SW0/O
+    SLICE_X52Y67.X       Tilo                  0.660   N30
+                                                       Inst_controller/leds_mux0000<3>_SW0_SW0
+    SLICE_X53Y66.F2      net (fanout=1)        0.869   N30
+    SLICE_X53Y66.CLK     Tfck                  0.728   Inst_controller/leds<4>
+                                                       Inst_controller/leds_mux0000<3>
+                                                       Inst_controller/leds_4
+    -------------------------------------------------  ---------------------------
+    Total                                      5.068ns (2.563ns logic, 2.505ns route)
+                                                       (50.6% logic, 49.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.352ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/state_0 (FF)
+  Destination:          Inst_controller/leds_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.634ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.014ns (0.015 - 0.029)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_controller/state_0 to Inst_controller/leds_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y52.XQ      Tcko                  0.515   Inst_controller/state<0>
+                                                       Inst_controller/state_0
+    SLICE_X52Y67.F4      net (fanout=23)       1.862   Inst_controller/state<0>
+    SLICE_X52Y67.X       Tilo                  0.660   N30
+                                                       Inst_controller/leds_mux0000<3>_SW0_SW0
+    SLICE_X53Y66.F2      net (fanout=1)        0.869   N30
+    SLICE_X53Y66.CLK     Tfck                  0.728   Inst_controller/leds<4>
+                                                       Inst_controller/leds_mux0000<3>
+                                                       Inst_controller/leds_4
+    -------------------------------------------------  ---------------------------
+    Total                                      4.634ns (1.903ns logic, 2.731ns route)
+                                                       (41.1% logic, 58.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.596ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/state_2 (FF)
+  Destination:          Inst_controller/leds_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.395ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.009ns (0.015 - 0.024)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_controller/state_2 to Inst_controller/leds_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y52.YQ      Tcko                  0.511   Inst_controller/state<2>
+                                                       Inst_controller/state_2
+    SLICE_X52Y67.F1      net (fanout=19)       1.627   Inst_controller/state<2>
+    SLICE_X52Y67.X       Tilo                  0.660   N30
+                                                       Inst_controller/leds_mux0000<3>_SW0_SW0
+    SLICE_X53Y66.F2      net (fanout=1)        0.869   N30
+    SLICE_X53Y66.CLK     Tfck                  0.728   Inst_controller/leds<4>
+                                                       Inst_controller/leds_mux0000<3>
+                                                       Inst_controller/leds_4
+    -------------------------------------------------  ---------------------------
+    Total                                      4.395ns (1.899ns logic, 2.496ns route)
+                                                       (43.2% logic, 56.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_controller/state_2 (SLICE_X53Y52.BY), 6 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.009ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/state_0 (FF)
+  Destination:          Inst_controller/state_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.986ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.005ns (0.024 - 0.029)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_controller/state_0 to Inst_controller/state_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y52.XQ      Tcko                  0.515   Inst_controller/state<0>
+                                                       Inst_controller/state_0
+    SLICE_X55Y60.G1      net (fanout=23)       1.785   Inst_controller/state<0>
+    SLICE_X55Y60.Y       Tilo                  0.612   N36
+                                                       Inst_controller/state_2_mux0000_SW1
+    SLICE_X55Y53.G3      net (fanout=1)        0.486   N3
+    SLICE_X55Y53.X       Tif5x                 0.890   Inst_controller/state_2_1
+                                                       Inst_controller/state_2_mux0000_F
+                                                       Inst_controller/state_2_mux0000
+    SLICE_X53Y52.BY      net (fanout=1)        0.384   Inst_controller/state_2_mux0000
+    SLICE_X53Y52.CLK     Tdick                 0.314   Inst_controller/state<2>
+                                                       Inst_controller/state_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.986ns (2.331ns logic, 2.655ns route)
+                                                       (46.8% logic, 53.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.979ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/state_1 (FF)
+  Destination:          Inst_controller/state_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.021ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_controller/state_1 to Inst_controller/state_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y60.XQ      Tcko                  0.515   Inst_controller/state<1>
+                                                       Inst_controller/state_1
+    SLICE_X55Y60.G2      net (fanout=26)       0.820   Inst_controller/state<1>
+    SLICE_X55Y60.Y       Tilo                  0.612   N36
+                                                       Inst_controller/state_2_mux0000_SW1
+    SLICE_X55Y53.G3      net (fanout=1)        0.486   N3
+    SLICE_X55Y53.X       Tif5x                 0.890   Inst_controller/state_2_1
+                                                       Inst_controller/state_2_mux0000_F
+                                                       Inst_controller/state_2_mux0000
+    SLICE_X53Y52.BY      net (fanout=1)        0.384   Inst_controller/state_2_mux0000
+    SLICE_X53Y52.CLK     Tdick                 0.314   Inst_controller/state<2>
+                                                       Inst_controller/state_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.021ns (2.331ns logic, 1.690ns route)
+                                                       (58.0% logic, 42.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.894ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/state_1 (FF)
+  Destination:          Inst_controller/state_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.106ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_controller/state_1 to Inst_controller/state_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y60.XQ      Tcko                  0.515   Inst_controller/state<1>
+                                                       Inst_controller/state_1
+    SLICE_X55Y53.F1      net (fanout=26)       1.003   Inst_controller/state<1>
+    SLICE_X55Y53.X       Tif5x                 0.890   Inst_controller/state_2_1
+                                                       Inst_controller/state_2_mux0000_G
+                                                       Inst_controller/state_2_mux0000
+    SLICE_X53Y52.BY      net (fanout=1)        0.384   Inst_controller/state_2_mux0000
+    SLICE_X53Y52.CLK     Tdick                 0.314   Inst_controller/state<2>
+                                                       Inst_controller/state_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.106ns (1.719ns logic, 1.387ns route)
+                                                       (55.3% logic, 44.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "CLK_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_controller/leds_7 (SLICE_X51Y68.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.150ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_controller/leds_7 (FF)
+  Destination:          Inst_controller/leds_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.150ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Inst_controller/leds_7 to Inst_controller/leds_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y68.XQ      Tcko                  0.411   Inst_controller/leds<7>
+                                                       Inst_controller/leds_7
+    SLICE_X51Y68.F4      net (fanout=2)        0.291   Inst_controller/leds<7>
+    SLICE_X51Y68.CLK     Tckf        (-Th)    -0.448   Inst_controller/leds<7>
+                                                       Inst_controller/leds_mux0000<0>1
+                                                       Inst_controller/leds_7
+    -------------------------------------------------  ---------------------------
+    Total                                      1.150ns (0.859ns logic, 0.291ns route)
+                                                       (74.7% logic, 25.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_controller/leds_6 (SLICE_X52Y61.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.232ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_controller/leds_6 (FF)
+  Destination:          Inst_controller/leds_6 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.232ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Inst_controller/leds_6 to Inst_controller/leds_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y61.XQ      Tcko                  0.412   Inst_controller/leds<6>
+                                                       Inst_controller/leds_6
+    SLICE_X52Y61.F4      net (fanout=3)        0.333   Inst_controller/leds<6>
+    SLICE_X52Y61.CLK     Tckf        (-Th)    -0.487   Inst_controller/leds<6>
+                                                       Inst_controller/leds_mux0000<1>301
+                                                       Inst_controller/leds_6
+    -------------------------------------------------  ---------------------------
+    Total                                      1.232ns (0.899ns logic, 0.333ns route)
+                                                       (73.0% logic, 27.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_controller/startdelay (SLICE_X52Y55.F2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.249ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_controller/startdelay (FF)
+  Destination:          Inst_controller/startdelay (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.249ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Inst_controller/startdelay to Inst_controller/startdelay
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y55.XQ      Tcko                  0.412   Inst_controller/startdelay
+                                                       Inst_controller/startdelay
+    SLICE_X52Y55.F2      net (fanout=3)        0.350   Inst_controller/startdelay
+    SLICE_X52Y55.CLK     Tckf        (-Th)    -0.487   Inst_controller/startdelay
+                                                       Inst_controller/startdelay_mux0000311
+                                                       Inst_controller/startdelay
+    -------------------------------------------------  ---------------------------
+    Total                                      1.249ns (0.899ns logic, 0.350ns route)
+                                                       (72.0% logic, 28.0% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "CLK_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
+--------------------------------------------------------------------------------
+Slack: 18.203ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 0.719ns (Tch)
+  Physical resource: Inst_controller/leds<3>/CLK
+  Logical resource: Inst_controller/leds_3/CK
+  Location pin: SLICE_X52Y66.CLK
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.203ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 0.719ns (Tch)
+  Physical resource: Inst_controller/state<0>/CLK
+  Logical resource: Inst_controller/state_0/CK
+  Location pin: SLICE_X54Y52.CLK
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.203ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 0.719ns (Tch)
+  Physical resource: Inst_controller/leds<6>/CLK
+  Logical resource: Inst_controller/leds_6/CK
+  Location pin: SLICE_X52Y61.CLK
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    5.100|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 153 paths, 0 nets, and 158 connections
+
+Design statistics:
+   Minimum period:   5.100ns{1}   (Maximum frequency: 196.078MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Oct 30 15:51:31 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 364 MB
+
+
+
