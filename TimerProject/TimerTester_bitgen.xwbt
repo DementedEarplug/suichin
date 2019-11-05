@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ubuntu/TimerProject/TimerTester.ncd
+OUTFILE=/home/ubuntu/TimerProject/TimerTester.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=/home/ubuntu/TimerProject
+LICENSE=WebPack
+USER_INFO=211793863_0_0_550

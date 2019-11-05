@@ -1,0 +1,26 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Nov 05 15:34:43 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "switches<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "switches<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "switches<2>" LOCATE = SITE "H18" LEVEL 1;
+COMP "switches<3>" LOCATE = SITE "N17" LEVEL 1;
+COMP "switches<4>" LOCATE = SITE "V4" LEVEL 1;
+COMP "switches<5>" LOCATE = SITE "H13" LEVEL 1;
+COMP "switches<6>" LOCATE = SITE "K17" LEVEL 1;
+COMP "switches<7>" LOCATE = SITE "D18" LEVEL 1;
+COMP "LEDs<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "LEDs<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "LEDs<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "LEDs<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "CLK" LOCATE = SITE "C9" LEVEL 1;
+COMP "LEDs<4>" LOCATE = SITE "C11" LEVEL 1;
+COMP "LEDs<5>" LOCATE = SITE "D11" LEVEL 1;
+COMP "LEDs<6>" LOCATE = SITE "E9" LEVEL 1;
+COMP "LEDs<7>" LOCATE = SITE "F9" LEVEL 1;
+NET "CLK_BUFGP/IBUFG" BEL "CLK_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+NET "CLK_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
+SCHEMATIC END;
+
