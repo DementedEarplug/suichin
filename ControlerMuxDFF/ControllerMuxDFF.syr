@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: ControllerMuxDFF.prj
@@ -107,34 +107,310 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" in Library work.
+Compiling vhdl file "/home/dementedearplug/Workspace/suichin/ControlerMuxDFF/dflipflop.vhd" in Library work.
+Architecture behavioral of Entity dflipflop is up to date.
+Compiling vhdl file "/home/dementedearplug/Workspace/suichin/ControlerMuxDFF/mux4to1.vhd" in Library work.
+Architecture behavioral of Entity mux4to1 is up to date.
+Compiling vhdl file "/home/dementedearplug/Workspace/suichin/ControlerMuxDFF/mux8to1.vhd" in Library work.
+Architecture behavioral of Entity mux8to1 is up to date.
+Compiling vhdl file "/home/dementedearplug/Workspace/suichin/ControlerMuxDFF/ControllerIndrMux.vhd" in Library work.
 Entity <controllermuxdff> compiled.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 103. Type of f2 is incompatible with type of or.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 104. Type of f3 is incompatible with type of and.
-ERROR:HDLParsers:808 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 105. = can not have such operands in this context.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 106. Type of f5 is incompatible with type of and.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 107. Type of f6 is incompatible with type of and.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 109. Type of Da is incompatible with type of or.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 110. Type of Db is incompatible with type of or.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 111. Type of Dc is incompatible with type of or.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 113. Type of m1Sel is incompatible with type of or.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 114. Type of m1Sel is incompatible with type of and.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 115. Type of m2Sel is incompatible with type of and.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 116. Type of m2Sel is incompatible with type of and.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 117. Type of m2Sel is incompatible with type of or.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 118. Type of m3Sel is incompatible with type of or.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 119. Type of m3Sel is incompatible with type of and.
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 121. Type of startdelay is incompatible with type of or.
-ERROR:HDLParsers:3312 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 122. Undefined symbol 'nEnddlay'.
-ERROR:HDLParsers:3313 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 149. Undefined symbol 'nEnddelay'.  Should it be: Enddelay?
-ERROR:HDLParsers:1209 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 149. nEnddelay: Undefined symbol (last report in this block)
-ERROR:HDLParsers:800 - "/home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd" Line 153. Type of Leds is incompatible with type of '0'.
+Entity <controllermuxdff> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ControllerMuxDFF> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <dflipflop> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux4to1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mux8to1> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ControllerMuxDFF> in library <work> (Architecture <behavioral>).
+Entity <ControllerMuxDFF> analyzed. Unit <ControllerMuxDFF> generated.
+
+Analyzing Entity <dflipflop> in library <work> (Architecture <behavioral>).
+Entity <dflipflop> analyzed. Unit <dflipflop> generated.
+
+Analyzing Entity <mux4to1> in library <work> (Architecture <behavioral>).
+Entity <mux4to1> analyzed. Unit <mux4to1> generated.
+
+Analyzing Entity <mux8to1> in library <work> (Architecture <behavioral>).
+Entity <mux8to1> analyzed. Unit <mux8to1> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <dflipflop>.
+    Related source file is "/home/dementedearplug/Workspace/suichin/ControlerMuxDFF/dflipflop.vhd".
+    Found 1-bit register for signal <Q>.
+    Found 1-bit register for signal <nQ>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <dflipflop> synthesized.
+
+
+Synthesizing Unit <mux4to1>.
+    Related source file is "/home/dementedearplug/Workspace/suichin/ControlerMuxDFF/mux4to1.vhd".
+Unit <mux4to1> synthesized.
+
+
+Synthesizing Unit <mux8to1>.
+    Related source file is "/home/dementedearplug/Workspace/suichin/ControlerMuxDFF/mux8to1.vhd".
+Unit <mux8to1> synthesized.
+
+
+Synthesizing Unit <ControllerMuxDFF>.
+    Related source file is "/home/dementedearplug/Workspace/suichin/ControlerMuxDFF/ControllerIndrMux.vhd".
+WARNING:Xst:1306 - Output <bell> is never assigned.
+WARNING:Xst:1306 - Output <leds> is never assigned.
+WARNING:Xst:1306 - Output <sendsms> is never assigned.
+WARNING:Xst:1306 - Output <lights> is never assigned.
+WARNING:Xst:646 - Signal <m3Out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <m2Out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <m1Out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <f6> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <f5> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <f4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <ControllerMuxDFF> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 6
+ 1-bit register                                        : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <Inst_Mux1> is unconnected in block <ControllerMuxDFF>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_Mux2> is unconnected in block <ControllerMuxDFF>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_Mux3> is unconnected in block <ControllerMuxDFF>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ControllerMuxDFF> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ControllerMuxDFF, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ControllerMuxDFF.ngr
+Top Level Output File Name         : ControllerMuxDFF
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 14
+#      LUT2                        : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 2
+#      LUT3_D                      : 1
+#      LUT4                        : 6
+#      LUT4_L                      : 1
+#      MUXF5                       : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 6
+#      FD                          : 2
+#      FDR                         : 3
+#      FDS                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 7
+#      IBUF                        : 6
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250evq100-5 
+
+ Number of Slices:                        7  out of   2448     0%  
+ Number of Slice Flip Flops:              6  out of   4896     0%  
+ Number of 4 input LUTs:                 12  out of   4896     0%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                   8  out of     66    12%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 6     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 3.845ns (Maximum Frequency: 260.081MHz)
+   Minimum input arrival time before clock: 5.304ns
+   Maximum output required time after clock: 5.533ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.845ns (frequency: 260.081MHz)
+  Total number of paths / destination ports: 26 / 7
+-------------------------------------------------------------------------
+Delay:               3.845ns (Levels of Logic = 2)
+  Source:            Inst_DA/Q (FF)
+  Destination:       Inst_DA/nQ (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Inst_DA/Q to Inst_DA/nQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              4   0.514   0.568  Inst_DA/Q (Inst_DA/Q)
+     LUT2:I1->O            1   0.612   0.387  Da0 (Da0)
+     LUT4:I2->O            1   0.612   0.357  Da32 (Da)
+     FDR:R                     0.795          Inst_DA/nQ
+    ----------------------------------------
+    Total                      3.845ns (2.533ns logic, 1.312ns route)
+                                       (65.9% logic, 34.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 26 / 7
+-------------------------------------------------------------------------
+Offset:              5.304ns (Levels of Logic = 4)
+  Source:            arm (PAD)
+  Destination:       Inst_DA/nQ (FF)
+  Destination Clock: clk rising
+
+  Data Path: arm to Inst_DA/nQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.532  arm_IBUF (arm_IBUF)
+     LUT4:I0->O            1   0.612   0.509  Da6 (Da6)
+     LUT3_D:I0->LO         1   0.612   0.169  Da8 (N9)
+     LUT4:I1->O            1   0.612   0.357  Da32 (Da)
+     FDR:R                     0.795          Inst_DA/nQ
+    ----------------------------------------
+    Total                      5.304ns (3.737ns logic, 1.567ns route)
+                                       (70.5% logic, 29.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 5 / 1
+-------------------------------------------------------------------------
+Offset:              5.533ns (Levels of Logic = 3)
+  Source:            Inst_DB/nQ (FF)
+  Destination:       startdelay (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Inst_DB/nQ to startdelay
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.514   0.603  Inst_DB/nQ (Inst_DB/nQ)
+     LUT4:I0->O            1   0.612   0.000  startdelay1 (startdelay1)
+     MUXF5:I1->O           1   0.278   0.357  startdelay_f5 (startdelay_OBUF)
+     OBUF:I->O                 3.169          startdelay_OBUF (startdelay)
+    ----------------------------------------
+    Total                      5.533ns (4.573ns logic, 0.960ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.96 secs
+ 
 --> 
 
 
-Total memory usage is 506096 kilobytes
+Total memory usage is 528760 kilobytes
 
-Number of errors   :   20 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

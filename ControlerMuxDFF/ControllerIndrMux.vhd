@@ -37,7 +37,7 @@ entity ControllerMuxDFF is
            enddelay : in  STD_LOGIC;
            test : in  STD_LOGIC;
            clk : in  STD_LOGIC;
-           leds : out  STD_LOGIC_vector(7 downto 0);
+           leds : out  STD_LOGIC_vector(2 downto 0);
            sendsms : out  STD_LOGIC;
            bell : out  STD_LOGIC;
            lights : out  STD_LOGIC;
@@ -58,6 +58,9 @@ architecture Behavioral of ControllerMuxDFF is
 	 signal m1Sel : std_logic_vector(1 downto 0);
 	 signal m2Sel : std_logic_vector(2 downto 0);
 	 signal m3Sel : std_logic_vector(1 downto 0);
+	 signal m1Out :std_logic;
+	 signal m2Out :std_logic;
+	 signal m3Out :std_logic;
     signal f1 : std_logic;
     signal f2 : std_logic; 
     signal f3 : std_logic;
@@ -80,46 +83,48 @@ architecture Behavioral of ControllerMuxDFF is
            B : in  std_logic;
            C : in  std_logic;
            D : in  std_logic;
-           Sel : in std_logic_vector(1 downto 0);
-           Q : out  std_logic;
-           Leds: out std_logic_vector(3 downto 0));
-	
+           mSel : in std_logic_vector(1 downto 0);
+           Q : out  std_logic
+          );	
 	end component;
 	
-	component mux5to1	Port(  
+	component mux8to1	Port(  
 			  A : in  std_logic;
            B : in  std_logic;
            C : in  std_logic;
            D : in  std_logic;
 			  E : in  std_logic;
-           Sel : in std_logic_vector(2 downto 0);
-           Q : out  std_logic;
-           Leds: out std_logic_vector(3 downto 0));
+			  F : in  std_logic;
+			  G : in  std_logic;
+			  H : in  std_logic;
+           mSel : in std_logic_vector(2 downto 0);
+           Q : out  std_logic
+          );
 	
 	end component;
 
 begin
 
 	 f1 <= (arm and (doors and windows  and frontdoor)) or (arm and (doors and windows and frontdoor));
-    f2 <= (test = '0' and doors = '0' and windows = '0' and arm = '1') or (test = '1') or (test = '0' and arm = '1' and (windows = '1' or doors = '1') and frontdoor = '1');
-    f3 <= (test = '0' and arm = '1' and (windows = '1' or doors = '1'));
-    f4 <= arm = 1 and (windows = '1' or doors = '1') and frontdoor = '0';
-    f5 <= test = '0' and arm = '1' and (windows = '1' or doors = '1') and frontdoor = '0';
-    f6 <= test = '0' and arm = '1' and (windows = '1' or doors = '1') and frontdoor = '1';
+    f2 <= (test  and doors  and windows  and arm ) or (test ) or (test  and arm  and (windows  or doors ) and frontdoor );
+    f3 <= (test  and arm  and (windows  or doors ));
+    f4 <= arm  and (windows  or doors ) and frontdoor ;
+    f5 <= test  and arm  and (windows  or doors ) and frontdoor ;
+    f6 <= test  and arm  and (windows  or doors ) and frontdoor ;
 	 
-    Da <= (An= '1' and  Bn= '1' and Cn = '1' and f1 = '1') or (B = '1' and Cn = '1' and test = '1') or (A = '1' and Bn = '1' and enddelay = '1');
-    Db <= (A = '1' and enddelay = '1') or (B = '1' and Cn = '1' and f2 = '1') or (B = '1' and C = '1' and enddelay = '0') or (A = '1' and B = '1');
-    Dc <= (An = '1' and C = '1' and arm = '1') or (An = '1' and B = '1' and  f3 = '1') or (B = '1' and C = '1');
+    Da <= (An and  Bn and Cn  and f1 ) or (B  and Cn  and test ) or (A  and Bn  and enddelay );
+    Db <= (A  and enddelay ) or (B  and Cn  and f2 ) or (B  and C  and enddelay ) or (A  and B );
+    Dc <= (An  and C  and arm ) or (An  and B  and  f3 ) or (B  and C );
 	 
-	 m1Sel(1) <= (B = '1' and Cn = '1') or (A = '1' and Cn = '1');
-	 m1Sel(0) <= (Bn = '1' and Cn = '1');
-	 m2Sel(2) <= (A = '1' and Bn = '1' and Cn = '1');
-	 m2Sel(1) <= (An = '1' and B = '1');
-	 m2Sel(0) <= (A = '1' and B = '1' and Cn = '1') or (An = '1' and B = '1' and C = '1');
-	 m3Sel(1) <= (A = '1' and B = '1' and Cn = '1') or (An = '1' and Bn = '1' and C = '1');
-	 m3Sel(0) <= (An = '1' and Bn = '1');
+	 m1Sel(1) <= (B  and Cn ) or (A  and Cn );
+	 m1Sel(0) <= (Bn  and Cn );
+	 m2Sel(2) <= (A  and Bn  and Cn );
+	 m2Sel(1) <= (An  and B );
+	 m2Sel(0) <= (A  and B  and Cn ) or (An  and B  and C );
+	 m3Sel(1) <= (A  and B  and Cn ) or (An  and Bn  and C );
+	 m3Sel(0) <= (An  and Bn );
 
-    startdelay <= (A = '1' and Bn = '1' and Cn = '1') or not(A = '1' and B = '1' and C = '1');
+    startdelay <= (A  and Bn  and Cn ) or not(A  and B  and C );
 	 nEnddelay <= (not enddelay);
 	 
     Inst_DA : dflipflop port map(
@@ -148,11 +153,40 @@ begin
 		  B 	 => f1,
         C 	 => test,
         D 	 => nEnddelay,
-        Sel(1)  => m1Sel(1),
-		  Sel(0)  => m1Sel(0),
-        Q 	 => '0',
-        Leds => '0'
+        mSel(1)  => m1Sel(1),
+		  mSel(0)  => m1Sel(0),
+        Q 	 => m1Out
+        
+	 );
+	 
+	 Inst_Mux2 : mux8to1 port map(
+		  A 	 => '0',
+		  B 	 => '1',
+        C 	 => f2,
+        D 	 => arm,
+		  E	 => nEnddelay,
+		  F	 => '0',
+		  G 	 => '0',
+		  H	 => '0',
+		  mSel(2)  => m2Sel(2),
+        mSel(1)  => m2Sel(1),
+		  mSel(0)  => m2Sel(0),
+        Q 	 => m2out
+        
+	 );
+	 
+	 Inst_Mux3 : mux4to1 port map(
+		  A 	 => '0',
+		  B 	 => '1',
+        C 	 => arm,
+        D 	 => f3,
+        mSel(1)  => m3Sel(1),
+		  mSel(0)  => m3Sel(0),
+        Q 	 => m3out
+        
 	 );
 
+	 
+	 
 
 end Behavioral;

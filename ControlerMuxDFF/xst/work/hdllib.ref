@@ -1,1 +1,8 @@
-EN controllermuxdff NULL /home/dementedearplug/Workspace/ControlerMuxDFF/ControllerIndrMux.vhd sub00/vhpl00 1572879862
+EN dflipflop NULL /home/dementedearplug/Workspace/suichin/ControlerMuxDFF/dflipflop.vhd sub00/vhpl01 1572962323
+EN mux4to1 NULL /home/dementedearplug/Workspace/suichin/ControlerMuxDFF/mux4to1.vhd sub00/vhpl03 1572962325
+AR dflipflop behavioral /home/dementedearplug/Workspace/suichin/ControlerMuxDFF/dflipflop.vhd sub00/vhpl02 1572962324
+EN controllermuxdff NULL /home/dementedearplug/Workspace/suichin/ControlerMuxDFF/ControllerIndrMux.vhd sub00/vhpl00 1572962329
+AR mux4to1 behavioral /home/dementedearplug/Workspace/suichin/ControlerMuxDFF/mux4to1.vhd sub00/vhpl04 1572962326
+AR controllermuxdff behavioral /home/dementedearplug/Workspace/suichin/ControlerMuxDFF/ControllerIndrMux.vhd sub00/vhpl07 1572962330
+EN mux8to1 NULL /home/dementedearplug/Workspace/suichin/ControlerMuxDFF/mux8to1.vhd sub00/vhpl05 1572962327
+AR mux8to1 behavioral /home/dementedearplug/Workspace/suichin/ControlerMuxDFF/mux8to1.vhd sub00/vhpl06 1572962328
