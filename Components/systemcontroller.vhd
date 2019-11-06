@@ -34,31 +34,32 @@ entity systemcontroller is
         arm : in              std_logic;
         doors : in            std_logic;
         windows : in          std_logic;
-        frontdoor : in        std_logic;
-        enddelay : in         std_logic;
+        frontdoor : in        std_logic;        
         test : in             std_logic;
 		clk : in 			  std_logic;
         leds : out            std_logic_vector(7 downto 0);
         sendsms : out         std_logic;
         bell : out            std_logic;
-        lights : out          std_logic;
-        startdelay : out      std_logic
-
+        lights : out          std_logic
     );
 
 end systemcontroller;
 
 architecture Behavioral of systemcontroller is
 
+    signal startdelay : std_logic := '0';
+    signal enddelay : std_logic := '0';
+	 signal sensors : std_logic;
+
     signal A : std_logic := '0';
     signal B : std_logic := '0';
     signal C : std_logic := '0';
     signal Da : std_logic;
-    signal An : std_logic;
+    signal An : std_logic := '0';
     signal Db : std_logic;
-    signal Bn : std_logic;
+    signal Bn : std_logic := '0';
     signal Dc : std_logic;
-    signal Cn : std_logic;
+    signal Cn : std_logic := '0';
     signal f1 : std_logic;
     signal f2 : std_logic; 
     signal f3 : std_logic;
@@ -67,29 +68,52 @@ architecture Behavioral of systemcontroller is
     signal f6 : std_logic;
 
 
+
     component dflipflop
     port(
           d : in std_logic;
           clk : in std_logic;
           q : out std_logic;
           nq : out std_logic
-    );
+        );
     end component;
 
+    component timer
+        port(
+            clk : in std_logic;
+            Start : in std_logic;
+            Endtimer : out std_logic
+        );
+    end component;
+    
+
 begin
+    sensors <= (doors or windows);
+    f1 <= (arm and not sensors and not frontdoor);
+    f2 <= (not test and not sensors and arm);
 
-    f1 <= (arm = '1' and (doors = '0' and windows = '0' and frontdoor = '0')) or (arm = '1' and (doors = '0' and windows = '0' and frontdoor = '1'));
-    f2 <= (test = '0' and doors = '0' and windows = '0' and arm = '1') or (test = '1') or (test = '0' and arm = '1' and (windows = '1' or doors = '1') and frontdoor = '1');
-    f3 <= (test = '0' and arm = '1' and (windows = '1' or doors = '1'));
-    f4 <= arm = 1 and (windows = '1' or doors = '1') and frontdoor = '0';
-    f5 <= test = '0' and arm = '1' and (windows = '1' or doors = '1') and frontdoor = '0';
-    f6 <= test = '0' and arm = '1' and (windows = '1' or doors = '1') and frontdoor = '1';
+    f3 <= (not test  and arm and sensors);
+	 f4 <= (B and Cn);
+    --f4 <= arm  and (windows or doors) and not frontdoor;
+    --f5 <= not test and arm  and (windows  or doors ) and not frontdoor;
+    --f6 <= not test and arm  and (windows  or doors ) and frontdoor;
 	 
-    Da <= (An= '1' and  Bn= '1' and Cn = '1' and f1 = '1') or (B = '1' and Cn = '1' and test = '1') or (A = '1' and Bn = '1' and enddelay = '1');
-    Db <= (A = '1' and enddelay = '1') or (B = '1' and Cn = '1' and f2 = '1') or (B = '1' and C = '1' and enddelay = '0') or (A = '1' and B = '1');
-    Dc <= (An = '1' and C = '1' and arm = '1') or (An = '1' and B = '1' and  f3 = '1') or (B = '1' and C = '1');
+    Da <= (An and  Bn and Cn and f1 ) or (f4 and test) or (A and Bn  and not enddelay);
+    Db <= (A and enddelay) or (f2 and B  and Cn ) or (f4 and test) or (f4 and f3 and frontdoor) or (B  and C and not enddelay) or (A  and B );
+    Dc <= (An and C and arm) or (f3 and not frontdoor and An and B)  or (An and B and f3 and frontdoor) or (B and C);
+	 
+	 
+    startdelay <= (A  and Bn  and Cn ) or  (An and B and C);
 
-    startdelay <= (A = '1' and Bn = '1' and Cn = '1') or not(A = '1' and B = '1' and C = '1');
+
+    leds(7) <= startdelay;
+	leds(6) <= doors;
+	leds(5) <= windows;
+	leds(4) <= frontdoor;
+	leds(3) <= arm;
+    leds(0) <= C;
+    leds(1) <= B;
+    leds(2) <= A;
 
     Inst_DA : dflipflop port map(
         d => Da,
@@ -111,6 +135,14 @@ begin
         q => C,
         nq => Cn
     );
+
+    Inst_delaytimer : timer port map(
+        clk => clk,
+        Start => startdelay,
+        Endtimer => enddelay
+    );
+
+
 	 
 end Behavioral;
 

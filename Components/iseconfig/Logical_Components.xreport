@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-10-31T18:57:48</DateModified>
+  <DateModified>2019-11-06T15:08:24</DateModified>
   <ModuleName>Logical_Components</ModuleName>
-  <SummaryTimeStamp>2019-10-15T14:43:32</SummaryTimeStamp>
+  <SummaryTimeStamp>2019-11-04T20:44:46</SummaryTimeStamp>
   <SavedFilePath>/home/ubuntu/Components/iseconfig/Logical_Components.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/ubuntu/Components/</ImplementationReportsDirectory>
   <DateInitialized>2019-09-29T22:40:22</DateInitialized>

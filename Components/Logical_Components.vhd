@@ -63,50 +63,58 @@ end Logical_Components;
 architecture Behavioral of Logical_Components is
 
     
-    component controller
+    
+
+    component systemcontroller
         port(
+
             Arm : in              std_logic;
             Doors : in            std_logic;
             Windows : in          std_logic;
             Frontdoor : in        std_logic;
-            Enddelay : in         std_logic;
+            
             Test : in             std_logic;
-				Clk : in					 std_logic;
+			Clk : in			  std_logic;
             Leds : out            std_logic_vector(7 downto 0);
             Sendsms : out         std_logic;
             Bell : out            std_logic;
-            Lights : out          std_logic;
-            Startdelay : out      std_logic
+            Lights : out          std_logic
         );
     end component;
 	 
 	 component dflipflop
-		  port(
-				d : in std_logic;
-				clk : in std_logic;
-				q : out std_logic;
-				nq : out std_logic
-		  );
-	 end component;
+		port(
+			d : in std_logic;
+			clk : in std_logic;
+			q : out std_logic;
+			nq : out std_logic
+		);
+     end component;
+     
+    
 	 
 	 
 	 
 begin    	
     
-    Inst_controller: controller port map(
-        Arm => switches(0),
+    Inst_controller: systemcontroller port map(
+        Arm => switches(7),
         Doors => switches(2),
         Windows => switches(1),
-        Frontdoor => switches(6),
-        Enddelay => switches(3),
-        Test => switches(7),
+        Frontdoor => switches(6),       
+        Test => switches(0),
 		  Clk => CLK,
         Leds => LEDs,
         Sendsms => sendsms,
         Bell => bell,
-        Lights => lights,
-        Startdelay => startdelay
+        Lights => lights       
     );
+
+    
+
+
+
+
 	 
 	
 	

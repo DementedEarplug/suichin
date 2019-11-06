@@ -1,2 +1,4 @@
-vhdl work "controller.vhd"
+vhdl work "timer.vhd"
+vhdl work "dflipflop.vhd"
+vhdl work "systemcontroller.vhd"
 vhdl work "Logical_Components.vhd"

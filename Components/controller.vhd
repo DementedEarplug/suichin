@@ -55,21 +55,7 @@ architecture Behavioral of controller is
 
 begin
 
-    --Put code to get data from the sensors
-    --for now setting some initial values
-    --arm <= 0;
-    --doors <= 0;
-    --windows <= 0;
-    --frontdoor <= 0;
-    --enddelay <= 0;
-    --test <= 0;
     
-    --output values being initially set to zero
-    --sendsms <= 0;
-    --bell <= 0;
-    --lights <= 0;
-    --startdelay <= 0;
-	 
 	 
 	 
 
