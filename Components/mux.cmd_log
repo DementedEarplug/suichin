@@ -1,1 +1,0 @@
-vhdtdtfi -prj Components -o /home/ubuntu/Components/mux.vhi -module mux -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work mux.vhd 

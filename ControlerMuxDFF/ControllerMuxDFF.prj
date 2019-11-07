@@ -1,4 +1,0 @@
-vhdl work "mux8to1.vhd"
-vhdl work "mux4to1.vhd"
-vhdl work "dflipflop.vhd"
-vhdl work "ControllerIndrMux.vhd"

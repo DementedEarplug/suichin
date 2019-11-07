@@ -1,4 +1,0 @@
-EN timertester NULL /home/ubuntu/TimerProject/TimerTester.vhd sub00/vhpl02 1572982461
-AR timer behavioral /home/ubuntu/TimerProject/timer.vhd sub00/vhpl01 1572982460
-AR timertester behavioral /home/ubuntu/TimerProject/TimerTester.vhd sub00/vhpl03 1572982462
-EN timer NULL /home/ubuntu/TimerProject/timer.vhd sub00/vhpl00 1572982459
