@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: HouseAlarm.prj
@@ -71,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -107,44 +107,41 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/home/ubuntu/HouseAlarm/dflipflop.vhd" in Library work.
-Entity <dflipflop> compiled.
-Entity <dflipflop> (Architecture <Behavioral>) compiled.
-Compiling vhdl file "/home/ubuntu/HouseAlarm/timer.vhd" in Library work.
-Entity <timer> compiled.
-Entity <timer> (Architecture <Behavioral>) compiled.
-Compiling vhdl file "/home/ubuntu/HouseAlarm/systemcontroller.vhd" in Library work.
+Compiling vhdl file "/home/ubuntu/git/suichin/HouseAlarm/dflipflop.vhd" in Library work.
+Architecture behavioral of Entity dflipflop is up to date.
+Compiling vhdl file "/home/ubuntu/git/suichin/HouseAlarm/timer.vhd" in Library work.
+Architecture behavioral of Entity timer is up to date.
+Compiling vhdl file "/home/ubuntu/git/suichin/HouseAlarm/systemcontroller.vhd" in Library work.
 Entity <systemcontroller> compiled.
-Entity <systemcontroller> (Architecture <Behavioral>) compiled.
-Compiling vhdl file "/home/ubuntu/HouseAlarm/HouseAlarm.vhd" in Library work.
-Entity <HouseAlarm> compiled.
-Entity <HouseAlarm> (Architecture <Behavioral>) compiled.
+Entity <systemcontroller> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/ubuntu/git/suichin/HouseAlarm/HouseAlarm.vhd" in Library work.
+Architecture behavioral of Entity housealarm is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <HouseAlarm> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <HouseAlarm> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <systemcontroller> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <systemcontroller> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <dflipflop> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <dflipflop> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <timer> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <timer> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <HouseAlarm> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <HouseAlarm> in library <work> (Architecture <behavioral>).
 Entity <HouseAlarm> analyzed. Unit <HouseAlarm> generated.
 
-Analyzing Entity <systemcontroller> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <systemcontroller> in library <work> (Architecture <behavioral>).
 Entity <systemcontroller> analyzed. Unit <systemcontroller> generated.
 
-Analyzing Entity <dflipflop> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <dflipflop> in library <work> (Architecture <behavioral>).
 Entity <dflipflop> analyzed. Unit <dflipflop> generated.
 
-Analyzing Entity <timer> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <timer> in library <work> (Architecture <behavioral>).
 Entity <timer> analyzed. Unit <timer> generated.
 
 
@@ -155,7 +152,7 @@ Entity <timer> analyzed. Unit <timer> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <dflipflop>.
-    Related source file is "/home/ubuntu/HouseAlarm/dflipflop.vhd".
+    Related source file is "/home/ubuntu/git/suichin/HouseAlarm/dflipflop.vhd".
     Found 1-bit register for signal <Q>.
     Found 1-bit register for signal <nQ>.
     Summary:
@@ -164,12 +161,11 @@ Unit <dflipflop> synthesized.
 
 
 Synthesizing Unit <timer>.
-    Related source file is "/home/ubuntu/HouseAlarm/timer.vhd".
-WARNING:Xst:653 - Signal <timelimit> is used but never assigned. This sourceless signal will be automatically connected to value 11101110011010110010100000000.
+    Related source file is "/home/ubuntu/git/suichin/HouseAlarm/timer.vhd".
     Found 1-bit register for signal <endtimer>.
-    Found 29-bit up counter for signal <count>.
-    Found 29-bit subtractor for signal <count$sub0000> created at line 54.
-    Found 29-bit comparator equal for signal <endtimer$cmp_eq0000> created at line 54.
+    Found 28-bit up counter for signal <count>.
+    Found 28-bit subtractor for signal <count$sub0000> created at line 55.
+    Found 28-bit comparator equal for signal <endtimer$cmp_eq0000> created at line 55.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -179,17 +175,18 @@ Unit <timer> synthesized.
 
 
 Synthesizing Unit <systemcontroller>.
-    Related source file is "/home/ubuntu/HouseAlarm/systemcontroller.vhd".
+    Related source file is "/home/ubuntu/git/suichin/HouseAlarm/systemcontroller.vhd".
 WARNING:Xst:1305 - Output <bell> is never assigned. Tied to value 0.
 WARNING:Xst:1305 - Output <sendsms> is never assigned. Tied to value 0.
 WARNING:Xst:1305 - Output <lights> is never assigned. Tied to value 0.
 WARNING:Xst:1780 - Signal <f6> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <f5> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <delaylimit> is used but never assigned. This sourceless signal will be automatically connected to value 1110111001101011001010000000.
 Unit <systemcontroller> synthesized.
 
 
 Synthesizing Unit <HouseAlarm>.
-    Related source file is "/home/ubuntu/HouseAlarm/HouseAlarm.vhd".
+    Related source file is "/home/ubuntu/git/suichin/HouseAlarm/HouseAlarm.vhd".
 WARNING:Xst:1306 - Output <startdelay> is never assigned.
 WARNING:Xst:647 - Input <Da> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <switches<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -212,13 +209,13 @@ HDL Synthesis Report
 
 Macro Statistics
 # Adders/Subtractors                                   : 1
- 29-bit subtractor                                     : 1
+ 28-bit subtractor                                     : 1
 # Counters                                             : 1
- 29-bit up counter                                     : 1
+ 28-bit up counter                                     : 1
 # Registers                                            : 7
  1-bit register                                        : 7
 # Comparators                                          : 1
- 29-bit comparator equal                               : 1
+ 28-bit comparator equal                               : 1
 
 =========================================================================
 
@@ -232,13 +229,13 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # Adders/Subtractors                                   : 1
- 29-bit subtractor                                     : 1
+ 28-bit subtractor                                     : 1
 # Counters                                             : 1
- 29-bit up counter                                     : 1
+ 28-bit up counter                                     : 1
 # Registers                                            : 7
  Flip-Flops                                            : 7
 # Comparators                                          : 1
- 29-bit comparator equal                               : 1
+ 28-bit comparator equal                               : 1
 
 =========================================================================
 
@@ -260,8 +257,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 36
- Flip-Flops                                            : 36
+# Registers                                            : 35
+ Flip-Flops                                            : 35
 
 =========================================================================
 
@@ -290,22 +287,22 @@ Design Statistics
 # IOs                              : 33
 
 Cell Usage :
-# BELS                             : 123
+# BELS                             : 118
 #      GND                         : 1
 #      INV                         : 2
-#      LUT1                        : 29
+#      LUT1                        : 27
 #      LUT2                        : 2
 #      LUT2_L                      : 1
-#      LUT3                        : 3
-#      LUT3_D                      : 4
+#      LUT3                        : 4
+#      LUT3_D                      : 3
 #      LUT4                        : 15
-#      MUXCY                       : 36
+#      MUXCY                       : 34
 #      VCC                         : 1
-#      XORCY                       : 29
-# FlipFlops/Latches                : 36
+#      XORCY                       : 28
+# FlipFlops/Latches                : 35
 #      FD                          : 1
 #      FDR                         : 3
-#      FDRE                        : 30
+#      FDRE                        : 29
 #      FDS                         : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -319,9 +316,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                       28  out of   4656     0%  
- Number of Slice Flip Flops:             36  out of   9312     0%  
- Number of 4 input LUTs:                 56  out of   9312     0%  
+ Number of Slices:                       27  out of   4656     0%  
+ Number of Slice Flip Flops:             35  out of   9312     0%  
+ Number of 4 input LUTs:                 54  out of   9312     0%  
  Number of IOs:                          33
  Number of bonded IOBs:                  17  out of    232     7%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -347,7 +344,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 36    |
+CLK                                | BUFGP                  | 35    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -358,8 +355,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.206ns (Maximum Frequency: 192.069MHz)
-   Minimum input arrival time before clock: 5.558ns
+   Minimum period: 5.155ns (Maximum Frequency: 193.998MHz)
+   Minimum input arrival time before clock: 5.581ns
    Maximum output required time after clock: 6.227ns
    Maximum combinational path delay: 4.774ns
 
@@ -369,56 +366,55 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 5.206ns (frequency: 192.069MHz)
-  Total number of paths / destination ports: 1519 / 97
+  Clock period: 5.155ns (frequency: 193.997MHz)
+  Total number of paths / destination ports: 1426 / 94
 -------------------------------------------------------------------------
-Delay:               5.206ns (Levels of Logic = 10)
+Delay:               5.155ns (Levels of Logic = 9)
   Source:            Inst_controller/Inst_delaytimer/count_7 (FF)
-  Destination:       Inst_controller/Inst_delaytimer/count_28 (FF)
+  Destination:       Inst_controller/Inst_delaytimer/count_27 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: Inst_controller/Inst_delaytimer/count_7 to Inst_controller/Inst_delaytimer/count_28
+  Data Path: Inst_controller/Inst_delaytimer/count_7 to Inst_controller/Inst_delaytimer/count_27
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             2   0.514   0.532  Inst_controller/Inst_delaytimer/count_7 (Inst_controller/Inst_delaytimer/count_7)
-     LUT1:I0->O            1   0.612   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<0>_rt (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<0>_rt)
+     LUT4:I0->O            1   0.612   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<0> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<0>)
      MUXCY:S->O            1   0.404   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<0> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<0>)
      MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>)
      MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<2> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<2>)
      MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>)
      MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4>)
      MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>)
-     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6>)
-     MUXCY:CI->O           2   0.289   0.380  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<7> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000)
-     INV:I->O             29   0.612   1.072  Inst_controller/Inst_delaytimer/count_not00011_INV_0 (Inst_controller/Inst_delaytimer/count_not0001)
+     MUXCY:CI->O           2   0.289   0.380  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000)
+     INV:I->O             28   0.612   1.072  Inst_controller/Inst_delaytimer/count_not00011_INV_0 (Inst_controller/Inst_delaytimer/count_not0001)
      FDRE:CE                   0.483          Inst_controller/Inst_delaytimer/count_0
     ----------------------------------------
-    Total                      5.206ns (3.223ns logic, 1.984ns route)
-                                       (61.9% logic, 38.1% route)
+    Total                      5.155ns (3.171ns logic, 1.984ns route)
+                                       (61.5% logic, 38.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
   Total number of paths / destination ports: 28 / 7
 -------------------------------------------------------------------------
-Offset:              5.558ns (Levels of Logic = 4)
+Offset:              5.581ns (Levels of Logic = 4)
   Source:            switches<7> (PAD)
-  Destination:       Inst_controller/Inst_DA/nQ (FF)
+  Destination:       Inst_controller/Inst_DB/nQ (FF)
   Destination Clock: CLK rising
 
-  Data Path: switches<7> to Inst_controller/Inst_DA/nQ
+  Data Path: switches<7> to Inst_controller/Inst_DB/nQ
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             4   1.106   0.651  switches_7_IBUF (switches_7_IBUF)
-     LUT4:I0->O            1   0.612   0.387  Inst_controller/Da15 (Inst_controller/Da15)
-     LUT3_D:I2->O          1   0.612   0.426  Inst_controller/Da17 (Inst_controller/Da17)
-     LUT4:I1->O            1   0.612   0.357  Inst_controller/Da49 (Inst_controller/Da)
-     FDR:R                     0.795          Inst_controller/Inst_DA/nQ
+     LUT4:I0->O            1   0.612   0.387  Inst_controller/Db17 (Inst_controller/Db17)
+     LUT3:I2->O            2   0.612   0.449  Inst_controller/Db24 (Inst_controller/Db24)
+     LUT4:I1->O            1   0.612   0.357  Inst_controller/Db52 (Inst_controller/Db)
+     FDR:R                     0.795          Inst_controller/Inst_DB/nQ
     ----------------------------------------
-    Total                      5.558ns (3.737ns logic, 1.821ns route)
-                                       (67.2% logic, 32.8% route)
+    Total                      5.581ns (3.737ns logic, 1.844ns route)
+                                       (67.0% logic, 33.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
@@ -462,13 +458,13 @@ Delay:               4.774ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 7.70 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.38 secs
  
 --> 
 
 
-Total memory usage is 529236 kilobytes
+Total memory usage is 529180 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   20 (   0 filtered)

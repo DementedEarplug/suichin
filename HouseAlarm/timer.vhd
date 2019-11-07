@@ -35,6 +35,7 @@ entity timer is
 	port(		
 		clk  : in std_logic;
 		start : in std_logic;
+		timelimit : in std_logic_vector(27 downto 0);
 		endtimer : out std_logic		
 	);
 	
@@ -42,8 +43,8 @@ end timer;
 
 architecture Behavioral of timer is
 
-	signal timelimit : std_logic_vector(28 downto 0) := "11101110011010110010100000000"; --this is the binary value required for 10 seconds
-	signal count: std_logic_vector(28 downto 0) :=    "00000000000000000000000000000";
+	
+	signal count: std_logic_vector(27 downto 0) :=    "0000000000000000000000000000";
 
 begin
 	
@@ -59,7 +60,7 @@ begin
 				
 			elsif(start = '0') then 
 				endtimer <= '0';
-				count <= "00000000000000000000000000000";
+				count <= "0000000000000000000000000000";
 			end if;
 			
 		end if;

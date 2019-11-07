@@ -66,6 +66,8 @@ architecture Behavioral of systemcontroller is
     signal f4 : std_logic;
     signal f5 : std_logic;
     signal f6 : std_logic;
+	 
+	 signal delaylimit  : std_logic_vector(27 downto 0) := "1110111001101011001010000000";
 
 
 
@@ -82,6 +84,7 @@ architecture Behavioral of systemcontroller is
         port(
             clk : in std_logic;
             Start : in std_logic;
+				Timelimit : in std_logic_vector(27 downto 0);
             Endtimer : out std_logic
         );
     end component;
@@ -139,6 +142,7 @@ begin
     Inst_delaytimer : timer port map(
         clk => clk,
         Start => startdelay,
+		  Timelimit => delaylimit,
         Endtimer => enddelay
     );
 
