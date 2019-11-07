@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Digitronics Students
+-- Engineer: Angel L. Rodriguez, Onix Tarrats and Luis F. Ruelas
 -- 
 -- Create Date:    11:50:25 11/07/2019 
 -- Design Name: 
