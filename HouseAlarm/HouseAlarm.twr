@@ -39,436 +39,364 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  1426 paths analyzed, 141 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.871ns.
+ Minimum period is   5.064ns.
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_controller/Inst_delaytimer/count_18 (SLICE_X49Y82.CE), 28 paths
+Paths for end point Inst_controller/Inst_delaytimer/count_12 (SLICE_X43Y84.SR), 6 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     15.129ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_delaytimer/count_7 (FF)
-  Destination:          Inst_controller/Inst_delaytimer/count_18 (FF)
+Slack (setup path):     14.936ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_DC/nQ (FF)
+  Destination:          Inst_controller/Inst_delaytimer/count_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.871ns (Levels of Logic = 4)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.057ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.007ns (0.107 - 0.114)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_delaytimer/count_7 to Inst_controller/Inst_delaytimer/count_18
+  Maximum Data Path: Inst_controller/Inst_DC/nQ to Inst_controller/Inst_delaytimer/count_12
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X49Y76.YQ      Tcko                  0.511   Inst_controller/Inst_delaytimer/count<6>
-                                                       Inst_controller/Inst_delaytimer/count_7
-    SLICE_X47Y79.F1      net (fanout=2)        1.206   Inst_controller/Inst_delaytimer/count<7>
-    SLICE_X47Y79.COUT    Topcyf                1.011   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<0>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<0>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<2>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.XB      Tcinxb                0.352   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6>
-    SLICE_X49Y82.CE      net (fanout=15)       1.102   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-    SLICE_X49Y82.CLK     Tceck                 0.483   Inst_controller/Inst_delaytimer/count<18>
-                                                       Inst_controller/Inst_delaytimer/count_18
+    SLICE_X30Y82.YQ      Tcko                  0.567   Inst_controller/Inst_DC/nQ
+                                                       Inst_controller/Inst_DC/nQ
+    SLICE_X35Y83.F2      net (fanout=6)        1.375   Inst_controller/Inst_DC/nQ
+    SLICE_X35Y83.X       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/Inst_delaytimer/start_inv1
+    SLICE_X43Y84.SR      net (fanout=15)       1.709   Inst_controller/Inst_delaytimer/start_inv
+    SLICE_X43Y84.CLK     Tsrck                 0.794   Inst_controller/Inst_delaytimer/count<12>
+                                                       Inst_controller/Inst_delaytimer/count_12
     -------------------------------------------------  ---------------------------
-    Total                                      4.871ns (2.563ns logic, 2.308ns route)
-                                                       (52.6% logic, 47.4% route)
+    Total                                      5.057ns (1.973ns logic, 3.084ns route)
+                                                       (39.0% logic, 61.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.454ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_delaytimer/count_21 (FF)
-  Destination:          Inst_controller/Inst_delaytimer/count_18 (FF)
+Slack (setup path):     14.958ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_DC/Q (FF)
+  Destination:          Inst_controller/Inst_delaytimer/count_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.546ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.035ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.007ns (0.107 - 0.114)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_delaytimer/count_21 to Inst_controller/Inst_delaytimer/count_18
+  Maximum Data Path: Inst_controller/Inst_DC/Q to Inst_controller/Inst_delaytimer/count_12
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X49Y83.YQ      Tcko                  0.511   Inst_controller/Inst_delaytimer/count<20>
-                                                       Inst_controller/Inst_delaytimer/count_21
-    SLICE_X47Y81.F3      net (fanout=2)        1.087   Inst_controller/Inst_delaytimer/count<21>
-    SLICE_X47Y81.COUT    Topcyf                1.011   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.XB      Tcinxb                0.352   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6>
-    SLICE_X49Y82.CE      net (fanout=15)       1.102   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-    SLICE_X49Y82.CLK     Tceck                 0.483   Inst_controller/Inst_delaytimer/count<18>
-                                                       Inst_controller/Inst_delaytimer/count_18
+    SLICE_X30Y83.XQ      Tcko                  0.515   Inst_controller/Inst_DC/Q
+                                                       Inst_controller/Inst_DC/Q
+    SLICE_X35Y83.G2      net (fanout=5)        0.754   Inst_controller/Inst_DC/Q
+    SLICE_X35Y83.Y       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/startdelay_SW0
+    SLICE_X35Y83.F4      net (fanout=2)        0.039   N4
+    SLICE_X35Y83.X       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/Inst_delaytimer/start_inv1
+    SLICE_X43Y84.SR      net (fanout=15)       1.709   Inst_controller/Inst_delaytimer/start_inv
+    SLICE_X43Y84.CLK     Tsrck                 0.794   Inst_controller/Inst_delaytimer/count<12>
+                                                       Inst_controller/Inst_delaytimer/count_12
     -------------------------------------------------  ---------------------------
-    Total                                      4.546ns (2.357ns logic, 2.189ns route)
-                                                       (51.8% logic, 48.2% route)
+    Total                                      5.035ns (2.533ns logic, 2.502ns route)
+                                                       (50.3% logic, 49.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.508ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_delaytimer/count_4 (FF)
-  Destination:          Inst_controller/Inst_delaytimer/count_18 (FF)
+Slack (setup path):     14.974ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_DA/nQ (FF)
+  Destination:          Inst_controller/Inst_delaytimer/count_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.492ns (Levels of Logic = 4)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.018ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.008ns (0.107 - 0.115)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_delaytimer/count_4 to Inst_controller/Inst_delaytimer/count_18
+  Maximum Data Path: Inst_controller/Inst_DA/nQ to Inst_controller/Inst_delaytimer/count_12
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X49Y75.XQ      Tcko                  0.514   Inst_controller/Inst_delaytimer/count<4>
-                                                       Inst_controller/Inst_delaytimer/count_4
-    SLICE_X47Y79.G1      net (fanout=2)        0.964   Inst_controller/Inst_delaytimer/count<4>
-    SLICE_X47Y79.COUT    Topcyg                0.871   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<1>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<2>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.XB      Tcinxb                0.352   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6>
-    SLICE_X49Y82.CE      net (fanout=15)       1.102   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-    SLICE_X49Y82.CLK     Tceck                 0.483   Inst_controller/Inst_delaytimer/count<18>
-                                                       Inst_controller/Inst_delaytimer/count_18
+    SLICE_X32Y82.YQ      Tcko                  0.567   Inst_controller/Inst_DA/nQ
+                                                       Inst_controller/Inst_DA/nQ
+    SLICE_X35Y83.G3      net (fanout=4)        0.685   Inst_controller/Inst_DA/nQ
+    SLICE_X35Y83.Y       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/startdelay_SW0
+    SLICE_X35Y83.F4      net (fanout=2)        0.039   N4
+    SLICE_X35Y83.X       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/Inst_delaytimer/start_inv1
+    SLICE_X43Y84.SR      net (fanout=15)       1.709   Inst_controller/Inst_delaytimer/start_inv
+    SLICE_X43Y84.CLK     Tsrck                 0.794   Inst_controller/Inst_delaytimer/count<12>
+                                                       Inst_controller/Inst_delaytimer/count_12
     -------------------------------------------------  ---------------------------
-    Total                                      4.492ns (2.426ns logic, 2.066ns route)
-                                                       (54.0% logic, 46.0% route)
+    Total                                      5.018ns (2.585ns logic, 2.433ns route)
+                                                       (51.5% logic, 48.5% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_controller/Inst_delaytimer/count_19 (SLICE_X49Y82.CE), 28 paths
+Paths for end point Inst_controller/Inst_delaytimer/count_13 (SLICE_X43Y84.SR), 6 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     15.129ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_delaytimer/count_7 (FF)
-  Destination:          Inst_controller/Inst_delaytimer/count_19 (FF)
+Slack (setup path):     14.936ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_DC/nQ (FF)
+  Destination:          Inst_controller/Inst_delaytimer/count_13 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.871ns (Levels of Logic = 4)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.057ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.007ns (0.107 - 0.114)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_delaytimer/count_7 to Inst_controller/Inst_delaytimer/count_19
+  Maximum Data Path: Inst_controller/Inst_DC/nQ to Inst_controller/Inst_delaytimer/count_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X49Y76.YQ      Tcko                  0.511   Inst_controller/Inst_delaytimer/count<6>
-                                                       Inst_controller/Inst_delaytimer/count_7
-    SLICE_X47Y79.F1      net (fanout=2)        1.206   Inst_controller/Inst_delaytimer/count<7>
-    SLICE_X47Y79.COUT    Topcyf                1.011   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<0>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<0>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<2>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.XB      Tcinxb                0.352   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6>
-    SLICE_X49Y82.CE      net (fanout=15)       1.102   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-    SLICE_X49Y82.CLK     Tceck                 0.483   Inst_controller/Inst_delaytimer/count<18>
-                                                       Inst_controller/Inst_delaytimer/count_19
+    SLICE_X30Y82.YQ      Tcko                  0.567   Inst_controller/Inst_DC/nQ
+                                                       Inst_controller/Inst_DC/nQ
+    SLICE_X35Y83.F2      net (fanout=6)        1.375   Inst_controller/Inst_DC/nQ
+    SLICE_X35Y83.X       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/Inst_delaytimer/start_inv1
+    SLICE_X43Y84.SR      net (fanout=15)       1.709   Inst_controller/Inst_delaytimer/start_inv
+    SLICE_X43Y84.CLK     Tsrck                 0.794   Inst_controller/Inst_delaytimer/count<12>
+                                                       Inst_controller/Inst_delaytimer/count_13
     -------------------------------------------------  ---------------------------
-    Total                                      4.871ns (2.563ns logic, 2.308ns route)
-                                                       (52.6% logic, 47.4% route)
+    Total                                      5.057ns (1.973ns logic, 3.084ns route)
+                                                       (39.0% logic, 61.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.454ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_delaytimer/count_21 (FF)
-  Destination:          Inst_controller/Inst_delaytimer/count_19 (FF)
+Slack (setup path):     14.958ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_DC/Q (FF)
+  Destination:          Inst_controller/Inst_delaytimer/count_13 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.546ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.035ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.007ns (0.107 - 0.114)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_delaytimer/count_21 to Inst_controller/Inst_delaytimer/count_19
+  Maximum Data Path: Inst_controller/Inst_DC/Q to Inst_controller/Inst_delaytimer/count_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X49Y83.YQ      Tcko                  0.511   Inst_controller/Inst_delaytimer/count<20>
-                                                       Inst_controller/Inst_delaytimer/count_21
-    SLICE_X47Y81.F3      net (fanout=2)        1.087   Inst_controller/Inst_delaytimer/count<21>
-    SLICE_X47Y81.COUT    Topcyf                1.011   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.XB      Tcinxb                0.352   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6>
-    SLICE_X49Y82.CE      net (fanout=15)       1.102   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-    SLICE_X49Y82.CLK     Tceck                 0.483   Inst_controller/Inst_delaytimer/count<18>
-                                                       Inst_controller/Inst_delaytimer/count_19
+    SLICE_X30Y83.XQ      Tcko                  0.515   Inst_controller/Inst_DC/Q
+                                                       Inst_controller/Inst_DC/Q
+    SLICE_X35Y83.G2      net (fanout=5)        0.754   Inst_controller/Inst_DC/Q
+    SLICE_X35Y83.Y       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/startdelay_SW0
+    SLICE_X35Y83.F4      net (fanout=2)        0.039   N4
+    SLICE_X35Y83.X       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/Inst_delaytimer/start_inv1
+    SLICE_X43Y84.SR      net (fanout=15)       1.709   Inst_controller/Inst_delaytimer/start_inv
+    SLICE_X43Y84.CLK     Tsrck                 0.794   Inst_controller/Inst_delaytimer/count<12>
+                                                       Inst_controller/Inst_delaytimer/count_13
     -------------------------------------------------  ---------------------------
-    Total                                      4.546ns (2.357ns logic, 2.189ns route)
-                                                       (51.8% logic, 48.2% route)
+    Total                                      5.035ns (2.533ns logic, 2.502ns route)
+                                                       (50.3% logic, 49.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.508ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_delaytimer/count_4 (FF)
-  Destination:          Inst_controller/Inst_delaytimer/count_19 (FF)
+Slack (setup path):     14.974ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_DA/nQ (FF)
+  Destination:          Inst_controller/Inst_delaytimer/count_13 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.492ns (Levels of Logic = 4)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.018ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.008ns (0.107 - 0.115)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_delaytimer/count_4 to Inst_controller/Inst_delaytimer/count_19
+  Maximum Data Path: Inst_controller/Inst_DA/nQ to Inst_controller/Inst_delaytimer/count_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X49Y75.XQ      Tcko                  0.514   Inst_controller/Inst_delaytimer/count<4>
-                                                       Inst_controller/Inst_delaytimer/count_4
-    SLICE_X47Y79.G1      net (fanout=2)        0.964   Inst_controller/Inst_delaytimer/count<4>
-    SLICE_X47Y79.COUT    Topcyg                0.871   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<1>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<2>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.XB      Tcinxb                0.352   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6>
-    SLICE_X49Y82.CE      net (fanout=15)       1.102   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-    SLICE_X49Y82.CLK     Tceck                 0.483   Inst_controller/Inst_delaytimer/count<18>
-                                                       Inst_controller/Inst_delaytimer/count_19
+    SLICE_X32Y82.YQ      Tcko                  0.567   Inst_controller/Inst_DA/nQ
+                                                       Inst_controller/Inst_DA/nQ
+    SLICE_X35Y83.G3      net (fanout=4)        0.685   Inst_controller/Inst_DA/nQ
+    SLICE_X35Y83.Y       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/startdelay_SW0
+    SLICE_X35Y83.F4      net (fanout=2)        0.039   N4
+    SLICE_X35Y83.X       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/Inst_delaytimer/start_inv1
+    SLICE_X43Y84.SR      net (fanout=15)       1.709   Inst_controller/Inst_delaytimer/start_inv
+    SLICE_X43Y84.CLK     Tsrck                 0.794   Inst_controller/Inst_delaytimer/count<12>
+                                                       Inst_controller/Inst_delaytimer/count_13
     -------------------------------------------------  ---------------------------
-    Total                                      4.492ns (2.426ns logic, 2.066ns route)
-                                                       (54.0% logic, 46.0% route)
+    Total                                      5.018ns (2.585ns logic, 2.433ns route)
+                                                       (51.5% logic, 48.5% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_controller/Inst_delaytimer/count_20 (SLICE_X49Y83.CE), 28 paths
+Paths for end point Inst_controller/Inst_delaytimer/count_14 (SLICE_X43Y85.SR), 6 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     15.129ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_delaytimer/count_7 (FF)
-  Destination:          Inst_controller/Inst_delaytimer/count_20 (FF)
+Slack (setup path):     14.936ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_DC/nQ (FF)
+  Destination:          Inst_controller/Inst_delaytimer/count_14 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.871ns (Levels of Logic = 4)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.057ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.007ns (0.107 - 0.114)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_delaytimer/count_7 to Inst_controller/Inst_delaytimer/count_20
+  Maximum Data Path: Inst_controller/Inst_DC/nQ to Inst_controller/Inst_delaytimer/count_14
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X49Y76.YQ      Tcko                  0.511   Inst_controller/Inst_delaytimer/count<6>
-                                                       Inst_controller/Inst_delaytimer/count_7
-    SLICE_X47Y79.F1      net (fanout=2)        1.206   Inst_controller/Inst_delaytimer/count<7>
-    SLICE_X47Y79.COUT    Topcyf                1.011   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<0>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<0>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<2>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.XB      Tcinxb                0.352   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6>
-    SLICE_X49Y83.CE      net (fanout=15)       1.102   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-    SLICE_X49Y83.CLK     Tceck                 0.483   Inst_controller/Inst_delaytimer/count<20>
-                                                       Inst_controller/Inst_delaytimer/count_20
+    SLICE_X30Y82.YQ      Tcko                  0.567   Inst_controller/Inst_DC/nQ
+                                                       Inst_controller/Inst_DC/nQ
+    SLICE_X35Y83.F2      net (fanout=6)        1.375   Inst_controller/Inst_DC/nQ
+    SLICE_X35Y83.X       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/Inst_delaytimer/start_inv1
+    SLICE_X43Y85.SR      net (fanout=15)       1.709   Inst_controller/Inst_delaytimer/start_inv
+    SLICE_X43Y85.CLK     Tsrck                 0.794   Inst_controller/Inst_delaytimer/count<14>
+                                                       Inst_controller/Inst_delaytimer/count_14
     -------------------------------------------------  ---------------------------
-    Total                                      4.871ns (2.563ns logic, 2.308ns route)
-                                                       (52.6% logic, 47.4% route)
+    Total                                      5.057ns (1.973ns logic, 3.084ns route)
+                                                       (39.0% logic, 61.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.454ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_delaytimer/count_21 (FF)
-  Destination:          Inst_controller/Inst_delaytimer/count_20 (FF)
+Slack (setup path):     14.958ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_DC/Q (FF)
+  Destination:          Inst_controller/Inst_delaytimer/count_14 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.546ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.035ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.007ns (0.107 - 0.114)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_delaytimer/count_21 to Inst_controller/Inst_delaytimer/count_20
+  Maximum Data Path: Inst_controller/Inst_DC/Q to Inst_controller/Inst_delaytimer/count_14
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X49Y83.YQ      Tcko                  0.511   Inst_controller/Inst_delaytimer/count<20>
-                                                       Inst_controller/Inst_delaytimer/count_21
-    SLICE_X47Y81.F3      net (fanout=2)        1.087   Inst_controller/Inst_delaytimer/count<21>
-    SLICE_X47Y81.COUT    Topcyf                1.011   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.XB      Tcinxb                0.352   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6>
-    SLICE_X49Y83.CE      net (fanout=15)       1.102   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-    SLICE_X49Y83.CLK     Tceck                 0.483   Inst_controller/Inst_delaytimer/count<20>
-                                                       Inst_controller/Inst_delaytimer/count_20
+    SLICE_X30Y83.XQ      Tcko                  0.515   Inst_controller/Inst_DC/Q
+                                                       Inst_controller/Inst_DC/Q
+    SLICE_X35Y83.G2      net (fanout=5)        0.754   Inst_controller/Inst_DC/Q
+    SLICE_X35Y83.Y       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/startdelay_SW0
+    SLICE_X35Y83.F4      net (fanout=2)        0.039   N4
+    SLICE_X35Y83.X       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/Inst_delaytimer/start_inv1
+    SLICE_X43Y85.SR      net (fanout=15)       1.709   Inst_controller/Inst_delaytimer/start_inv
+    SLICE_X43Y85.CLK     Tsrck                 0.794   Inst_controller/Inst_delaytimer/count<14>
+                                                       Inst_controller/Inst_delaytimer/count_14
     -------------------------------------------------  ---------------------------
-    Total                                      4.546ns (2.357ns logic, 2.189ns route)
-                                                       (51.8% logic, 48.2% route)
+    Total                                      5.035ns (2.533ns logic, 2.502ns route)
+                                                       (50.3% logic, 49.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.508ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_delaytimer/count_4 (FF)
-  Destination:          Inst_controller/Inst_delaytimer/count_20 (FF)
+Slack (setup path):     14.974ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_DA/nQ (FF)
+  Destination:          Inst_controller/Inst_delaytimer/count_14 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.492ns (Levels of Logic = 4)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.018ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.008ns (0.107 - 0.115)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_delaytimer/count_4 to Inst_controller/Inst_delaytimer/count_20
+  Maximum Data Path: Inst_controller/Inst_DA/nQ to Inst_controller/Inst_delaytimer/count_14
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X49Y75.XQ      Tcko                  0.514   Inst_controller/Inst_delaytimer/count<4>
-                                                       Inst_controller/Inst_delaytimer/count_4
-    SLICE_X47Y79.G1      net (fanout=2)        0.964   Inst_controller/Inst_delaytimer/count<4>
-    SLICE_X47Y79.COUT    Topcyg                0.871   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<1>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>
-    SLICE_X47Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<2>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>
-    SLICE_X47Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4>
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>
-    SLICE_X47Y82.XB      Tcinxb                0.352   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-                                                       Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6>
-    SLICE_X49Y83.CE      net (fanout=15)       1.102   Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000
-    SLICE_X49Y83.CLK     Tceck                 0.483   Inst_controller/Inst_delaytimer/count<20>
-                                                       Inst_controller/Inst_delaytimer/count_20
+    SLICE_X32Y82.YQ      Tcko                  0.567   Inst_controller/Inst_DA/nQ
+                                                       Inst_controller/Inst_DA/nQ
+    SLICE_X35Y83.G3      net (fanout=4)        0.685   Inst_controller/Inst_DA/nQ
+    SLICE_X35Y83.Y       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/startdelay_SW0
+    SLICE_X35Y83.F4      net (fanout=2)        0.039   N4
+    SLICE_X35Y83.X       Tilo                  0.612   Inst_controller/Inst_delaytimer/start_inv
+                                                       Inst_controller/Inst_delaytimer/start_inv1
+    SLICE_X43Y85.SR      net (fanout=15)       1.709   Inst_controller/Inst_delaytimer/start_inv
+    SLICE_X43Y85.CLK     Tsrck                 0.794   Inst_controller/Inst_delaytimer/count<14>
+                                                       Inst_controller/Inst_delaytimer/count_14
     -------------------------------------------------  ---------------------------
-    Total                                      4.492ns (2.426ns logic, 2.066ns route)
-                                                       (54.0% logic, 46.0% route)
+    Total                                      5.018ns (2.585ns logic, 2.433ns route)
+                                                       (51.5% logic, 48.5% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "CLK_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_controller/Inst_DC/Q (SLICE_X53Y69.F2), 1 path
+Paths for end point Inst_controller/Inst_DC/Q (SLICE_X30Y83.F4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.309ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               Inst_controller/Inst_DB/Q (FF)
+Slack (hold path):      1.270ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_controller/Inst_DC/Q (FF)
   Destination:          Inst_controller/Inst_DC/Q (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.309ns (Levels of Logic = 1)
+  Data Path Delay:      1.270ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 20.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: Inst_controller/Inst_DB/Q to Inst_controller/Inst_DC/Q
+  Minimum Data Path: Inst_controller/Inst_DC/Q to Inst_controller/Inst_DC/Q
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X52Y68.XQ      Tcko                  0.412   Inst_controller/Inst_DB/Q
-                                                       Inst_controller/Inst_DB/Q
-    SLICE_X53Y69.F2      net (fanout=6)        0.449   Inst_controller/Inst_DB/Q
-    SLICE_X53Y69.CLK     Tckf        (-Th)    -0.448   Inst_controller/Inst_DC/Q
+    SLICE_X30Y83.XQ      Tcko                  0.412   Inst_controller/Inst_DC/Q
+                                                       Inst_controller/Inst_DC/Q
+    SLICE_X30Y83.F4      net (fanout=5)        0.371   Inst_controller/Inst_DC/Q
+    SLICE_X30Y83.CLK     Tckf        (-Th)    -0.487   Inst_controller/Inst_DC/Q
                                                        Inst_controller/Dc27
                                                        Inst_controller/Inst_DC/Q
     -------------------------------------------------  ---------------------------
-    Total                                      1.309ns (0.860ns logic, 0.449ns route)
-                                                       (65.7% logic, 34.3% route)
+    Total                                      1.270ns (0.899ns logic, 0.371ns route)
+                                                       (70.8% logic, 29.2% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_controller/Inst_DA/Q (SLICE_X51Y68.F1), 1 path
+Paths for end point Inst_controller/Inst_DB/Q (SLICE_X34Y82.F1), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.335ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               Inst_controller/Inst_DB/nQ (FF)
-  Destination:          Inst_controller/Inst_DA/Q (FF)
+Slack (hold path):      1.364ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_controller/Inst_DB/Q (FF)
+  Destination:          Inst_controller/Inst_DB/Q (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.330ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.005ns (0.010 - 0.015)
-  Source Clock:         CLK_BUFGP rising at 20.000ns
-  Destination Clock:    CLK_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: Inst_controller/Inst_DB/nQ to Inst_controller/Inst_DA/Q
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X52Y67.YQ      Tcko                  0.454   Inst_controller/Inst_DB/nQ
-                                                       Inst_controller/Inst_DB/nQ
-    SLICE_X51Y68.F1      net (fanout=4)        0.428   Inst_controller/Inst_DB/nQ
-    SLICE_X51Y68.CLK     Tckf        (-Th)    -0.448   Inst_controller/Inst_DA/Q
-                                                       Inst_controller/Da491
-                                                       Inst_controller/Inst_DA/Q
-    -------------------------------------------------  ---------------------------
-    Total                                      1.330ns (0.902ns logic, 0.428ns route)
-                                                       (67.8% logic, 32.2% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point Inst_controller/Inst_delaytimer/count_4 (SLICE_X49Y75.F4), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      1.397ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               Inst_controller/Inst_delaytimer/count_4 (FF)
-  Destination:          Inst_controller/Inst_delaytimer/count_4 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      1.397ns (Levels of Logic = 1)
+  Data Path Delay:      1.364ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 20.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: Inst_controller/Inst_delaytimer/count_4 to Inst_controller/Inst_delaytimer/count_4
+  Minimum Data Path: Inst_controller/Inst_DB/Q to Inst_controller/Inst_DB/Q
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X49Y75.XQ      Tcko                  0.411   Inst_controller/Inst_delaytimer/count<4>
-                                                       Inst_controller/Inst_delaytimer/count_4
-    SLICE_X49Y75.F4      net (fanout=2)        0.290   Inst_controller/Inst_delaytimer/count<4>
-    SLICE_X49Y75.CLK     Tckf        (-Th)    -0.696   Inst_controller/Inst_delaytimer/count<4>
-                                                       Inst_controller/Inst_delaytimer/count<4>_rt
-                                                       Inst_controller/Inst_delaytimer/Mcount_count_xor<4>
-                                                       Inst_controller/Inst_delaytimer/count_4
+    SLICE_X34Y82.XQ      Tcko                  0.412   Inst_controller/Inst_DB/Q
+                                                       Inst_controller/Inst_DB/Q
+    SLICE_X34Y82.F1      net (fanout=7)        0.465   Inst_controller/Inst_DB/Q
+    SLICE_X34Y82.CLK     Tckf        (-Th)    -0.487   Inst_controller/Inst_DB/Q
+                                                       Inst_controller/Db521
+                                                       Inst_controller/Inst_DB/Q
     -------------------------------------------------  ---------------------------
-    Total                                      1.397ns (1.107ns logic, 0.290ns route)
-                                                       (79.2% logic, 20.8% route)
+    Total                                      1.364ns (0.899ns logic, 0.465ns route)
+                                                       (65.9% logic, 34.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_controller/Inst_delaytimer/count_12 (SLICE_X43Y84.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.403ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_controller/Inst_delaytimer/count_12 (FF)
+  Destination:          Inst_controller/Inst_delaytimer/count_12 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.403ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Inst_controller/Inst_delaytimer/count_12 to Inst_controller/Inst_delaytimer/count_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y84.XQ      Tcko                  0.411   Inst_controller/Inst_delaytimer/count<12>
+                                                       Inst_controller/Inst_delaytimer/count_12
+    SLICE_X43Y84.F4      net (fanout=2)        0.296   Inst_controller/Inst_delaytimer/count<12>
+    SLICE_X43Y84.CLK     Tckf        (-Th)    -0.696   Inst_controller/Inst_delaytimer/count<12>
+                                                       Inst_controller/Inst_delaytimer/count<12>_rt
+                                                       Inst_controller/Inst_delaytimer/Mcount_count_xor<12>
+                                                       Inst_controller/Inst_delaytimer/count_12
+    -------------------------------------------------  ---------------------------
+    Total                                      1.403ns (1.107ns logic, 0.296ns route)
+                                                       (78.9% logic, 21.1% route)
 
 --------------------------------------------------------------------------------
 
@@ -478,27 +406,27 @@ Slack: 18.203ns (period - (min high pulse limit / (high pulse / period)))
   Period: 20.000ns
   High pulse: 8.000ns
   High pulse limit: 0.719ns (Tch)
-  Physical resource: Inst_controller/Inst_DB/Q/CLK
-  Logical resource: Inst_controller/Inst_DB/Q/CK
-  Location pin: SLICE_X52Y68.CLK
-  Clock network: CLK_BUFGP
---------------------------------------------------------------------------------
-Slack: 18.203ns (period - (min high pulse limit / (high pulse / period)))
-  Period: 20.000ns
-  High pulse: 8.000ns
-  High pulse limit: 0.719ns (Tch)
-  Physical resource: Inst_controller/Inst_delaytimer/endtimer/CLK
-  Logical resource: Inst_controller/Inst_delaytimer/endtimer/CK
-  Location pin: SLICE_X48Y68.CLK
-  Clock network: CLK_BUFGP
---------------------------------------------------------------------------------
-Slack: 18.203ns (period - (min high pulse limit / (high pulse / period)))
-  Period: 20.000ns
-  High pulse: 8.000ns
-  High pulse limit: 0.719ns (Tch)
   Physical resource: Inst_controller/Inst_DA/nQ/CLK
   Logical resource: Inst_controller/Inst_DA/nQ/CK
-  Location pin: SLICE_X50Y66.CLK
+  Location pin: SLICE_X32Y82.CLK
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.203ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 0.719ns (Tch)
+  Physical resource: Inst_controller/Inst_DB/Q/CLK
+  Logical resource: Inst_controller/Inst_DB/Q/CK
+  Location pin: SLICE_X34Y82.CLK
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.203ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 0.719ns (Tch)
+  Physical resource: Inst_controller/Inst_DA/Q/CLK
+  Logical resource: Inst_controller/Inst_DA/Q/CK
+  Location pin: SLICE_X32Y83.CLK
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
 
@@ -515,7 +443,7 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    4.871|         |         |         |
+CLK            |    5.064|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -527,13 +455,13 @@ Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 Constraints cover 1426 paths, 0 nets, and 167 connections
 
 Design statistics:
-   Minimum period:   4.871ns{1}   (Maximum frequency: 205.297MHz)
+   Minimum period:   5.064ns{1}   (Maximum frequency: 197.472MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Nov  7 14:23:01 2019 
+Analysis completed Thu Nov  7 15:53:52 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:

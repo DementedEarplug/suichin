@@ -99,7 +99,7 @@ begin
     f3 <= (not test  and arm and sensors);
      f4 <= (B and Cn);
      
-    f4 <= (A and B and Cn) or (An and Bn and C);
+    f5 <= (A and B and Cn) or (An and Bn and C);
     --f4 <= arm  and (windows or doors) and not frontdoor;
     --f5 <= not test and arm  and (windows  or doors ) and not frontdoor;
     --f6 <= not test and arm  and (windows  or doors ) and frontdoor;
@@ -126,7 +126,7 @@ begin
     lights <= f5;
 
    
-    leds(4) <= bell;
+    leds(4) <= f5;
     leds(5) <= test;
 
     Inst_DA : dflipflop port map(

@@ -13,7 +13,7 @@ Annotating constraints to design from ucf file "constraints.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 INFO:ConstraintSystem - The Period constraint <NET "CLK" PERIOD = 20.0ns HIGH
-   40%;> [constraints.ucf(19)], is specified using the Net Period method which
+   40%;> [constraints.ucf(27)], is specified using the Net Period method which
    is not recommended. Please use the Timespec PERIOD method.
 
 Done...
@@ -31,7 +31,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 407216 kilobytes
+Total memory usage is 407276 kilobytes
 
 Writing NGD file "HouseAlarm.ngd" ...
 Total REAL time to NGDBUILD completion:  5 sec

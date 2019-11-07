@@ -9,35 +9,35 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Nov  7 14:22:30 2019
+Mapped Date    : Thu Nov  7 15:53:22 2019
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    3
+Number of warnings:    6
 Logic Utilization:
   Number of Slice Flip Flops:            35 out of   9,312    1%
-  Number of 4 input LUTs:                26 out of   9,312    1%
+  Number of 4 input LUTs:                28 out of   9,312    1%
 Logic Distribution:
-  Number of occupied Slices:             31 out of   4,656    1%
-    Number of Slices containing only related logic:      31 out of      31 100%
-    Number of Slices containing unrelated logic:          0 out of      31   0%
+  Number of occupied Slices:             33 out of   4,656    1%
+    Number of Slices containing only related logic:      33 out of      33 100%
+    Number of Slices containing unrelated logic:          0 out of      33   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          53 out of   9,312    1%
-    Number used as logic:                26
+  Total Number of 4 input LUTs:          55 out of   9,312    1%
+    Number used as logic:                28
     Number used as a route-thru:         27
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 20 out of     232    8%
+  Number of bonded IOBs:                 26 out of     232   11%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                2.66
+Average Fanout of Non-Clock Nets:                2.64
 
 Peak Memory Usage:  596 MB
-Total REAL time to MAP completion:  3 secs 
-Total CPU time to MAP completion:   3 secs 
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   4 secs 
 
 NOTES:
 
@@ -78,17 +78,23 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:PhysDesignRules:367 - The signal <switches<1>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <switches<2>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <switches<3>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <switches<4>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <switches<5>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <switches<6>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
 
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network startdelay has no load.
-INFO:LIT:395 - The above info message is repeated 15 more times for the
+INFO:LIT:395 - The above info message is repeated 18 more times for the
    following (max. 5 shown):
    Da,
    doors,
@@ -99,9 +105,6 @@ INFO:LIT:395 - The above info message is repeated 15 more times for the
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:MapLib:159 - Net Timing constraints on signal CLK are pushed forward
    through input buffer.
-INFO:LIT:244 - All of the single ended outputs in this design are using slew
-   rate limited output drivers. The delay on speed critical single ended outputs
-   can be dramatically reduced by designating them as fast outputs.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
@@ -134,6 +137,12 @@ Section 6 - IOB Properties
 | LEDs<5>                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
 | LEDs<6>                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
 | LEDs<7>                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| SENSORs<0>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| SENSORs<1>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| SENSORs<2>                         | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| W_LEDs<0>                          | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| W_LEDs<1>                          | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| W_LEDs<2>                          | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
 | bell                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | lights                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | sendsms                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
