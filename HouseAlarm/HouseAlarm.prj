@@ -1,0 +1,4 @@
+vhdl work "timer.vhd"
+vhdl work "dflipflop.vhd"
+vhdl work "systemcontroller.vhd"
+vhdl work "HouseAlarm.vhd"
