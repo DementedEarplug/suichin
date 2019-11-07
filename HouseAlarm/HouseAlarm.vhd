@@ -38,6 +38,7 @@ entity HouseAlarm is
 			  Qa : out std_logic;
 			  Qan : out std_logic;
            switches : in std_logic_vector(7 downto 0);
+           SENSORs : in          std_logic_vector(2 downto 0);
 			  CLK : in std_logic;
 			  arm : in              std_logic;
            doors : in            std_logic;
@@ -49,7 +50,8 @@ entity HouseAlarm is
            lights : out std_logic;
            sendsms : out std_logic;
            startdelay : out std_logic;
-           LEDs: out std_logic_vector(7 downto 0));
+           LEDs : out std_logic_vector(7 downto 0)
+           W_LEDs : out std_logic_vector(2 downto 0));
 
 end HouseAlarm;
 
@@ -62,10 +64,11 @@ architecture Behavioral of HouseAlarm is
             Doors : in            std_logic;
             Windows : in          std_logic;
             Frontdoor : in        std_logic;
-            
+            SENSORs : in          std_logic_vector(2 downto 0);
             Test : in             std_logic;
 			Clk : in			  std_logic;
             Leds : out            std_logic_vector(7 downto 0);
+            WLeds : out          std_logc_vector(2 downto 0);
             Sendsms : out         std_logic;
             Bell : out            std_logic;
             Lights : out          std_logic
@@ -76,12 +79,13 @@ begin
 
 	 Inst_controller: systemcontroller port map(
 			  Arm => switches(7),
-			  Doors => switches(2),
-			  Windows => switches(1),
-			  Frontdoor => switches(6),       
+			  Doors => SENSORs(2),
+			  Windows => SENSORs(1),
+			  Frontdoor => SENSORs(0),       
 			  Test => switches(0),
 			  Clk => CLK,
-			  Leds => LEDs,
+              Leds => LEDs,
+              WLeds => W_LEDs,
 			  Sendsms => sendsms,
 			  Bell => bell,
 			  Lights => lights       

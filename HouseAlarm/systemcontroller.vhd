@@ -36,8 +36,9 @@ entity systemcontroller is
         windows : in          std_logic;
         frontdoor : in        std_logic;        
         test : in             std_logic;
-		clk : in 			  std_logic;
+        clk : in 			  std_logic;
         leds : out            std_logic_vector(7 downto 0);
+        w_leds : out          std_logic_vector(2 downto 0);
         sendsms : out         std_logic;
         bell : out            std_logic;
         lights : out          std_logic
@@ -96,7 +97,9 @@ begin
     f2 <= (not test and not sensors and arm);
 
     f3 <= (not test  and arm and sensors);
-	 f4 <= (B and Cn);
+     f4 <= (B and Cn);
+     
+    f4 <= (A and B and Cn) or (An and Bn and C);
     --f4 <= arm  and (windows or doors) and not frontdoor;
     --f5 <= not test and arm  and (windows  or doors ) and not frontdoor;
     --f6 <= not test and arm  and (windows  or doors ) and frontdoor;
@@ -110,13 +113,21 @@ begin
 
 
     leds(7) <= startdelay;
-	leds(6) <= doors;
-	leds(5) <= windows;
-	leds(4) <= frontdoor;
+    w_leds(2) <= doors;
+    w_leds(1) <= windows;
+    w_leds(0) <= frontdoor;
 	leds(3) <= arm;
     leds(0) <= C;
     leds(1) <= B;
     leds(2) <= A;
+
+    sendsms <= f5;
+    bell <= f5;
+    lights <= f5;
+
+   
+    leds(4) <= bell;
+    leds(5) <= test;
 
     Inst_DA : dflipflop port map(
         d => Da,
