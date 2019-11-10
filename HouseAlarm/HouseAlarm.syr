@@ -110,7 +110,8 @@ Slice Utilization Ratio Delta      : 5
 Compiling vhdl file "/home/ubuntu/git/suichin/HouseAlarm/dflipflop.vhd" in Library work.
 Architecture behavioral of Entity dflipflop is up to date.
 Compiling vhdl file "/home/ubuntu/git/suichin/HouseAlarm/timer.vhd" in Library work.
-Architecture behavioral of Entity timer is up to date.
+Entity <timer> compiled.
+Entity <timer> (Architecture <behavioral>) compiled.
 Compiling vhdl file "/home/ubuntu/git/suichin/HouseAlarm/systemcontroller.vhd" in Library work.
 Entity <systemcontroller> compiled.
 Entity <systemcontroller> (Architecture <behavioral>) compiled.
@@ -162,22 +163,28 @@ Unit <dflipflop> synthesized.
 
 Synthesizing Unit <timer>.
     Related source file is "/home/ubuntu/git/suichin/HouseAlarm/timer.vhd".
+WARNING:Xst:653 - Signal <endlimit> is used but never assigned. This sourceless signal will be automatically connected to value 0010111110101111000010000000.
     Found 1-bit register for signal <endtimer>.
-    Found 28-bit up counter for signal <count>.
-    Found 28-bit subtractor for signal <count$sub0000> created at line 56.
-    Found 28-bit comparator equal for signal <endtimer$cmp_eq0000> created at line 56.
+    Found 28-bit register for signal <count>.
+    Found 28-bit adder for signal <count$addsub0000> created at line 63.
+    Found 28-bit comparator equal for signal <count$cmp_eq0000> created at line 59.
+    Found 28-bit comparator not equal for signal <count$cmp_ne0000> created at line 67.
+    Found 28-bit subtractor for signal <count$sub0000> created at line 59.
+    Found 28-bit subtractor for signal <count$sub0001> created at line 67.
+    Found 28-bit up counter for signal <endcount>.
+    Found 28-bit comparator equal for signal <endcount$cmp_eq0000> created at line 67.
+    Found 28-bit comparator not equal for signal <endtimer$cmp_ne0000> created at line 59.
     Summary:
 	inferred   1 Counter(s).
-	inferred   1 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
 Unit <timer> synthesized.
 
 
 Synthesizing Unit <systemcontroller>.
     Related source file is "/home/ubuntu/git/suichin/HouseAlarm/systemcontroller.vhd".
-WARNING:Xst:1305 - Output <leds<6>> is never assigned. Tied to value 0.
-WARNING:Xst:1780 - Signal <f6> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <lightsdelay> is used but never assigned. This sourceless signal will be automatically connected to value 0010111110101111000010000000.
 WARNING:Xst:653 - Signal <delaylimit> is used but never assigned. This sourceless signal will be automatically connected to value 1110111001101011001010000000.
 Unit <systemcontroller> synthesized.
 
@@ -205,14 +212,17 @@ Unit <HouseAlarm> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
- 28-bit subtractor                                     : 1
-# Counters                                             : 1
- 28-bit up counter                                     : 1
-# Registers                                            : 7
- 1-bit register                                        : 7
-# Comparators                                          : 1
- 28-bit comparator equal                               : 1
+# Adders/Subtractors                                   : 6
+ 28-bit adder                                          : 2
+ 28-bit subtractor                                     : 4
+# Counters                                             : 2
+ 28-bit up counter                                     : 2
+# Registers                                            : 10
+ 1-bit register                                        : 8
+ 28-bit register                                       : 2
+# Comparators                                          : 8
+ 28-bit comparator equal                               : 4
+ 28-bit comparator not equal                           : 4
 
 =========================================================================
 
@@ -225,14 +235,16 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
- 28-bit subtractor                                     : 1
-# Counters                                             : 1
- 28-bit up counter                                     : 1
-# Registers                                            : 7
- Flip-Flops                                            : 7
-# Comparators                                          : 1
- 28-bit comparator equal                               : 1
+# Adders/Subtractors                                   : 6
+ 28-bit adder                                          : 2
+ 28-bit subtractor                                     : 4
+# Counters                                             : 2
+ 28-bit up counter                                     : 2
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+# Comparators                                          : 8
+ 28-bit comparator equal                               : 4
+ 28-bit comparator not equal                           : 4
 
 =========================================================================
 
@@ -242,11 +254,41 @@ Macro Statistics
 
 Optimizing unit <HouseAlarm> ...
 
+Optimizing unit <timer> ...
+
 Optimizing unit <systemcontroller> ...
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_0> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_1> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_2> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_3> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_4> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_5> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_6> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_7> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_8> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_9> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_10> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_11> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_12> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_13> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_14> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_15> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_16> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_17> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_18> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_19> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_20> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_21> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_22> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_23> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_24> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_25> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_26> of sequential type is unconnected in block <HouseAlarm>.
+WARNING:Xst:2677 - Node <Inst_controller/Inst_delaytimer/endcount_27> of sequential type is unconnected in block <HouseAlarm>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block HouseAlarm, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block HouseAlarm, actual ratio is 2.
 
 Final Macro Processing ...
 
@@ -254,8 +296,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 35
- Flip-Flops                                            : 35
+# Registers                                            : 92
+ Flip-Flops                                            : 92
 
 =========================================================================
 
@@ -284,22 +326,25 @@ Design Statistics
 # IOs                              : 39
 
 Cell Usage :
-# BELS                             : 120
+# BELS                             : 402
 #      GND                         : 1
-#      INV                         : 2
-#      LUT1                        : 27
-#      LUT2                        : 2
-#      LUT2_L                      : 1
-#      LUT3                        : 4
+#      INV                         : 3
+#      LUT1                        : 81
+#      LUT2                        : 78
+#      LUT2_L                      : 2
+#      LUT3                        : 6
 #      LUT3_D                      : 4
-#      LUT4                        : 16
-#      MUXCY                       : 34
+#      LUT4                        : 28
+#      LUT4_D                      : 1
+#      LUT4_L                      : 4
+#      MUXCY                       : 109
 #      VCC                         : 1
-#      XORCY                       : 28
-# FlipFlops/Latches                : 35
+#      XORCY                       : 84
+# FlipFlops/Latches                : 92
 #      FD                          : 1
+#      FDE                         : 58
 #      FDR                         : 3
-#      FDRE                        : 29
+#      FDRE                        : 28
 #      FDS                         : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -313,9 +358,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                       29  out of   4656     0%  
- Number of Slice Flip Flops:             35  out of   9312     0%  
- Number of 4 input LUTs:                 56  out of   9312     0%  
+ Number of Slices:                      109  out of   4656     2%  
+ Number of Slice Flip Flops:             92  out of   9312     0%  
+ Number of 4 input LUTs:                207  out of   9312     2%  
  Number of IOs:                          39
  Number of bonded IOBs:                  20  out of    232     8%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -341,7 +386,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 35    |
+CLK                                | BUFGP                  | 92    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -352,9 +397,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.155ns (Maximum Frequency: 193.998MHz)
-   Minimum input arrival time before clock: 5.558ns
-   Maximum output required time after clock: 6.605ns
+   Minimum period: 6.162ns (Maximum Frequency: 162.295MHz)
+   Minimum input arrival time before clock: 5.519ns
+   Maximum output required time after clock: 7.229ns
    Maximum combinational path delay: 4.774ns
 
 Timing Detail:
@@ -363,39 +408,46 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 5.155ns (frequency: 193.997MHz)
-  Total number of paths / destination ports: 1426 / 94
+  Clock period: 6.162ns (frequency: 162.295MHz)
+  Total number of paths / destination ports: 6402 / 208
 -------------------------------------------------------------------------
-Delay:               5.155ns (Levels of Logic = 9)
-  Source:            Inst_controller/Inst_delaytimer/count_7 (FF)
-  Destination:       Inst_controller/Inst_delaytimer/count_27 (FF)
+Delay:               6.162ns (Levels of Logic = 16)
+  Source:            Inst_controller/Inst_lightsdelay/count_0 (FF)
+  Destination:       Inst_controller/Inst_lightsdelay/endcount_0 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: Inst_controller/Inst_delaytimer/count_7 to Inst_controller/Inst_delaytimer/count_27
+  Data Path: Inst_controller/Inst_lightsdelay/count_0 to Inst_controller/Inst_lightsdelay/endcount_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.514   0.532  Inst_controller/Inst_delaytimer/count_7 (Inst_controller/Inst_delaytimer/count_7)
-     LUT4:I0->O            1   0.612   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<0> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_lut<0>)
-     MUXCY:S->O            1   0.404   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<0> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<0>)
-     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<2> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<5>)
-     MUXCY:CI->O           2   0.289   0.380  Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000_wg_cy<6> (Inst_controller/Inst_delaytimer/endtimer_cmp_eq0000)
-     INV:I->O             28   0.612   1.072  Inst_controller/Inst_delaytimer/count_not00011_INV_0 (Inst_controller/Inst_delaytimer/count_not0001)
-     FDRE:CE                   0.483          Inst_controller/Inst_delaytimer/count_0
+     FDE:C->Q              2   0.514   0.532  Inst_controller/Inst_lightsdelay/count_0 (Inst_controller/Inst_lightsdelay/count_0)
+     LUT2:I0->O            1   0.612   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<0>1 (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<0> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>)
+     MUXCY:CI->O           3   0.399   0.603  Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13> (Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>)
+     LUT2:I0->O           28   0.612   1.072  Inst_controller/Inst_lightsdelay/endcount_and00001 (Inst_controller/Inst_lightsdelay/endcount_and0000)
+     FDRE:R                    0.795          Inst_controller/Inst_lightsdelay/endcount_0
     ----------------------------------------
-    Total                      5.155ns (3.171ns logic, 1.984ns route)
-                                       (61.5% logic, 38.5% route)
+    Total                      6.162ns (3.955ns logic, 2.207ns route)
+                                       (64.2% logic, 35.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
   Total number of paths / destination ports: 28 / 7
 -------------------------------------------------------------------------
-Offset:              5.558ns (Levels of Logic = 4)
+Offset:              5.519ns (Levels of Logic = 4)
   Source:            switches<7> (PAD)
   Destination:       Inst_controller/Inst_DA/nQ (FF)
   Destination Clock: CLK rising
@@ -406,33 +458,33 @@ Offset:              5.558ns (Levels of Logic = 4)
     ----------------------------------------  ------------
      IBUF:I->O             4   1.106   0.651  switches_7_IBUF (switches_7_IBUF)
      LUT4:I0->O            1   0.612   0.387  Inst_controller/Da15 (Inst_controller/Da15)
-     LUT3_D:I2->O          1   0.612   0.426  Inst_controller/Da17 (Inst_controller/Da17)
-     LUT4:I1->O            1   0.612   0.357  Inst_controller/Da49 (Inst_controller/Da)
+     LUT3_D:I2->O          1   0.612   0.387  Inst_controller/Da17 (Inst_controller/Da17)
+     LUT4:I2->O            1   0.612   0.357  Inst_controller/Da49 (Inst_controller/Da)
      FDR:R                     0.795          Inst_controller/Inst_DA/nQ
     ----------------------------------------
-    Total                      5.558ns (3.737ns logic, 1.821ns route)
-                                       (67.2% logic, 32.8% route)
+    Total                      5.519ns (3.737ns logic, 1.782ns route)
+                                       (67.7% logic, 32.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 33 / 8
+  Total number of paths / destination ports: 35 / 9
 -------------------------------------------------------------------------
-Offset:              6.605ns (Levels of Logic = 3)
-  Source:            Inst_controller/Inst_DC/Q (FF)
-  Destination:       bell (PAD)
+Offset:              7.229ns (Levels of Logic = 3)
+  Source:            Inst_controller/Inst_DB/Q (FF)
+  Destination:       LEDs<6> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: Inst_controller/Inst_DC/Q to bell
+  Data Path: Inst_controller/Inst_DB/Q to LEDs<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               5   0.514   0.690  Inst_controller/Inst_DC/Q (Inst_controller/Inst_DC/Q)
-     LUT3:I0->O            1   0.612   0.509  Inst_controller/f5_SW0 (N2)
-     LUT4:I0->O            4   0.612   0.499  Inst_controller/f5 (LEDs_4_OBUF)
-     OBUF:I->O                 3.169          bell_OBUF (bell)
+     FDS:C->Q              8   0.514   0.795  Inst_controller/Inst_DB/Q (Inst_controller/Inst_DB/Q)
+     LUT2:I0->O            3   0.612   0.454  Inst_controller/f5_SW1 (N6)
+     LUT4:I3->O           31   0.612   1.073  Inst_controller/f61 (LEDs_6_OBUF)
+     OBUF:I->O                 3.169          LEDs_6_OBUF (LEDs<6>)
     ----------------------------------------
-    Total                      6.605ns (4.907ns logic, 1.698ns route)
-                                       (74.3% logic, 25.7% route)
+    Total                      7.229ns (4.907ns logic, 2.322ns route)
+                                       (67.9% logic, 32.1% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -455,15 +507,15 @@ Delay:               4.774ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.38 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.47 secs
  
 --> 
 
 
-Total memory usage is 529220 kilobytes
+Total memory usage is 532244 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   17 (   0 filtered)
+Number of warnings :   45 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

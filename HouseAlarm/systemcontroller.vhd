@@ -68,8 +68,11 @@ architecture Behavioral of systemcontroller is
     signal f5 : std_logic;
     signal f6 : std_logic;
 	 
-	 signal delaylimit  : std_logic_vector(27 downto 0) := "1110111001101011001010000000";
-
+	signal delaylimit  : std_logic_vector(27 downto 0) := "1110111001101011001010000000";
+    
+    signal lightsdelay : std_logic_vector(27 downto 0) := "00" & "10111110101111000010000000";
+	 
+	 signal lightsendtimer : std_logic := '0';
 
 
     component dflipflop
@@ -86,6 +89,7 @@ architecture Behavioral of systemcontroller is
             clk : in std_logic;
             Start : in std_logic;
 				Timelimit : in std_logic_vector(27 downto 0);
+				Special : in std_logic;
             Endtimer : out std_logic
         );
     end component;
@@ -94,6 +98,8 @@ architecture Behavioral of systemcontroller is
 begin
     sensors <= (doors or windows);
     f1 <= (arm and not sensors and not frontdoor);
+	 
+	  
     f2 <= (not test and not sensors and arm);
 
     f3 <= (not test  and arm and sensors);
@@ -123,7 +129,9 @@ begin
 
     sendsms <= f5;
     bell <= f5;
-    lights <= f5;
+    
+
+    
 
    
     leds(4) <= f5;
@@ -154,7 +162,24 @@ begin
         clk => clk,
         Start => startdelay,
 		  Timelimit => delaylimit,
+		  Special => '0',
         Endtimer => enddelay
+    );
+
+    
+    f6 <= (f5 xor lightsendtimer)and f5;
+	 
+    lights <= lightsendtimer;
+     
+    leds(6) <= f6;
+	 
+    Inst_lightsdelay : timer port map(
+        clk => clk,
+        Start => f6,
+        Timelimit => lightsdelay,
+		  Special => '1',
+        Endtimer => lightsendtimer
+
     );
 
 

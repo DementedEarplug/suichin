@@ -37,6 +37,7 @@ entity timer is
 		clk  : in std_logic;
 		start : in std_logic;
 		timelimit : in std_logic_vector(27 downto 0);
+		special : in std_logic;
 		endtimer : out std_logic		
 	);
 	
@@ -46,6 +47,8 @@ architecture Behavioral of timer is
 
 	
 	signal count: std_logic_vector(27 downto 0) :=    "0000000000000000000000000000";
+	signal endcount : std_logic_vector(27 downto 0) :=    "0000000000000000000000000000";
+	signal endlimit : std_logic_vector(27 downto 0) :=  "00" & "10111110101111000010000000";
 
 begin
 	
@@ -55,13 +58,22 @@ begin
 			if(start = '1') then
 				if(count = timelimit-1) then					
 					endtimer <= '1';
+					endcount <= "0000000000000000000000000000";
 				else 
 					count <= count + 1;
 				end if;
 				
-			elsif(start = '0') then 
-				endtimer <= '0';
-				count <= "0000000000000000000000000000";
+			elsif(start = '0' and special = '1') then 
+				if(endcount = endlimit-1) then
+					endtimer <= '0';
+					count <= "0000000000000000000000000000";
+				else
+					endcount <= endcount + 1;
+
+				end if;
+			elsif(start = '0' and special = '0') then 
+				  endtimer <= '0';
+				  count <= "0000000000000000000000000000";
 			end if;
 			
 		end if;

@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (lin64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Thu Nov  7 15:53:47 2019
+#Sat Nov  9 21:50:04 2019
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -56,7 +56,7 @@ B16,,DIFFM,IO_L01P_0,UNUSED,,0,,,,,,,,,
 B17,,,GND,,,,,,,,,,,,
 B18,,IBUF,IP,UNUSED,,1,,,,,,,,,
 C1,sendsms,IOB,IO_L01P_3,OUTPUT,LVCMOS25*,3,12,SLOW,NONE**,,,UNLOCATED,NO,NONE,
-C2,lights,IOB,IO_L01N_3,OUTPUT,LVCMOS25*,3,12,SLOW,NONE**,,,UNLOCATED,NO,NONE,
+C2,bell,IOB,IO_L01N_3,OUTPUT,LVCMOS25*,3,12,SLOW,NONE**,,,UNLOCATED,NO,NONE,
 C3,,DIFFM,IO_L25P_0,UNUSED,,0,,,,,,,,,
 C4,,IOB,IO,UNUSED,,0,,,,,,,,,
 C5,,DIFFM,IO_L23P_0,UNUSED,,0,,,,,,,,,
@@ -73,7 +73,7 @@ C15,,IBUF,IP,UNUSED,,0,,,,,,,,,
 C16,,,TDO,,,,,,,,,,,,
 C17,,DIFFS,IO_L24N_1/LDC2,UNUSED,,1,,,,,,,,,
 C18,,DIFFM,IO_L24P_1/LDC1,UNUSED,,1,,,,,,,,,
-D1,bell,IOB,IO_L02P_3,OUTPUT,LVCMOS25*,3,12,SLOW,NONE**,,,UNLOCATED,NO,NONE,
+D1,lights,IOB,IO_L02P_3,OUTPUT,LVCMOS25*,3,12,SLOW,NONE**,,,UNLOCATED,NO,NONE,
 D2,,DIFFS,IO_L02N_3/VREF_3,UNUSED,,3,,,,,,,,,
 D3,,IBUF,IP,UNUSED,,3,,,,,,,,,
 D4,,,NC,,,,,,,,,,,,
