@@ -39,520 +39,526 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  6402 paths analyzed, 317 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   8.154ns.
+ Minimum period is   6.703ns.
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_controller/Inst_lightsdelay/count_21 (SLICE_X2Y64.CE), 63 paths
+Paths for end point Inst_controller/Inst_lightsdelay/count_7 (SLICE_X12Y77.CE), 63 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     11.846ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     13.297ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_lightsdelay/count_2 (FF)
+  Destination:          Inst_controller/Inst_lightsdelay/count_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.701ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.002ns (0.001 - 0.003)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_2 to Inst_controller/Inst_lightsdelay/count_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y74.YQ      Tcko                  0.567   Inst_controller/Inst_lightsdelay/count<3>
+                                                       Inst_controller/Inst_lightsdelay/count_2
+    SLICE_X15Y77.G4      net (fanout=2)        0.594   Inst_controller/Inst_lightsdelay/count<2>
+    SLICE_X15Y77.COUT    Topcyg                0.871   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<1>1
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y79.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y79.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y82.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y83.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y83.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X22Y83.G1      net (fanout=3)        1.306   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X22Y83.Y       Tilo                  0.660   Inst_controller/Inst_lightsdelay/count_not0001
+                                                       Inst_controller/Inst_lightsdelay/count_not00011
+    SLICE_X12Y77.CE      net (fanout=14)       1.602   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X12Y77.CLK     Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<7>
+                                                       Inst_controller/Inst_lightsdelay/count_7
+    -------------------------------------------------  ---------------------------
+    Total                                      6.701ns (3.199ns logic, 3.502ns route)
+                                                       (47.7% logic, 52.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.312ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_lightsdelay/count_3 (FF)
+  Destination:          Inst_controller/Inst_lightsdelay/count_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.686ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.002ns (0.001 - 0.003)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_3 to Inst_controller/Inst_lightsdelay/count_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y74.XQ      Tcko                  0.515   Inst_controller/Inst_lightsdelay/count<3>
+                                                       Inst_controller/Inst_lightsdelay/count_3
+    SLICE_X15Y77.G2      net (fanout=2)        0.631   Inst_controller/Inst_lightsdelay/count<3>
+    SLICE_X15Y77.COUT    Topcyg                0.871   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<1>1
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y79.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y79.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y82.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y83.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y83.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X22Y83.G1      net (fanout=3)        1.306   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X22Y83.Y       Tilo                  0.660   Inst_controller/Inst_lightsdelay/count_not0001
+                                                       Inst_controller/Inst_lightsdelay/count_not00011
+    SLICE_X12Y77.CE      net (fanout=14)       1.602   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X12Y77.CLK     Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<7>
+                                                       Inst_controller/Inst_lightsdelay/count_7
+    -------------------------------------------------  ---------------------------
+    Total                                      6.686ns (3.147ns logic, 3.539ns route)
+                                                       (47.1% logic, 52.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.325ns (requirement - (data path - clock path skew + uncertainty))
   Source:               Inst_controller/Inst_lightsdelay/count_1 (FF)
-  Destination:          Inst_controller/Inst_lightsdelay/count_21 (FF)
+  Destination:          Inst_controller/Inst_lightsdelay/count_7 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.144ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.010ns (0.049 - 0.059)
+  Data Path Delay:      6.673ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.002ns (0.001 - 0.003)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_1 to Inst_controller/Inst_lightsdelay/count_21
+  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_1 to Inst_controller/Inst_lightsdelay/count_7
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y55.XQ       Tcko                  0.515   Inst_controller/Inst_lightsdelay/count<1>
+    SLICE_X12Y75.XQ      Tcko                  0.515   Inst_controller/Inst_lightsdelay/count<1>
                                                        Inst_controller/Inst_lightsdelay/count_1
-    SLICE_X3Y59.F2       net (fanout=2)        0.636   Inst_controller/Inst_lightsdelay/count<1>
-    SLICE_X3Y59.COUT     Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y77.F1      net (fanout=2)        0.478   Inst_controller/Inst_lightsdelay/count<1>
+    SLICE_X15Y77.COUT    Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<0>1
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<0>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y78.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y79.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y79.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y82.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X15Y83.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y83.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.G1      net (fanout=3)        1.783   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.Y       Tilo                  0.612   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X22Y83.G1      net (fanout=3)        1.306   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X22Y83.Y       Tilo                  0.660   Inst_controller/Inst_lightsdelay/count_not0001
                                                        Inst_controller/Inst_lightsdelay/count_not00011
-    SLICE_X2Y64.CE       net (fanout=14)       2.486   Inst_controller/Inst_lightsdelay/count_not0001
-    SLICE_X2Y64.CLK      Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<21>
-                                                       Inst_controller/Inst_lightsdelay/count_21
+    SLICE_X12Y77.CE      net (fanout=14)       1.602   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X12Y77.CLK     Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<7>
+                                                       Inst_controller/Inst_lightsdelay/count_7
     -------------------------------------------------  ---------------------------
-    Total                                      8.144ns (3.239ns logic, 4.905ns route)
-                                                       (39.8% logic, 60.2% route)
+    Total                                      6.673ns (3.287ns logic, 3.386ns route)
+                                                       (49.3% logic, 50.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     11.862ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_lightsdelay/count_0 (FF)
-  Destination:          Inst_controller/Inst_lightsdelay/count_21 (FF)
+
+Paths for end point Inst_controller/Inst_lightsdelay/count_6 (SLICE_X12Y77.CE), 63 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.297ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_lightsdelay/count_2 (FF)
+  Destination:          Inst_controller/Inst_lightsdelay/count_6 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.128ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.010ns (0.049 - 0.059)
+  Data Path Delay:      6.701ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.002ns (0.001 - 0.003)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_0 to Inst_controller/Inst_lightsdelay/count_21
+  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_2 to Inst_controller/Inst_lightsdelay/count_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y55.YQ       Tcko                  0.567   Inst_controller/Inst_lightsdelay/count<1>
-                                                       Inst_controller/Inst_lightsdelay/count_0
-    SLICE_X3Y59.F3       net (fanout=2)        0.568   Inst_controller/Inst_lightsdelay/count<0>
-    SLICE_X3Y59.COUT     Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<0>1
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<0>
+    SLICE_X12Y74.YQ      Tcko                  0.567   Inst_controller/Inst_lightsdelay/count<3>
+                                                       Inst_controller/Inst_lightsdelay/count_2
+    SLICE_X15Y77.G4      net (fanout=2)        0.594   Inst_controller/Inst_lightsdelay/count<2>
+    SLICE_X15Y77.COUT    Topcyg                0.871   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<1>1
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y78.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y79.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y79.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y82.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X15Y83.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y83.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.G1      net (fanout=3)        1.783   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.Y       Tilo                  0.612   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X22Y83.G1      net (fanout=3)        1.306   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X22Y83.Y       Tilo                  0.660   Inst_controller/Inst_lightsdelay/count_not0001
                                                        Inst_controller/Inst_lightsdelay/count_not00011
-    SLICE_X2Y64.CE       net (fanout=14)       2.486   Inst_controller/Inst_lightsdelay/count_not0001
-    SLICE_X2Y64.CLK      Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<21>
-                                                       Inst_controller/Inst_lightsdelay/count_21
+    SLICE_X12Y77.CE      net (fanout=14)       1.602   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X12Y77.CLK     Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<7>
+                                                       Inst_controller/Inst_lightsdelay/count_6
     -------------------------------------------------  ---------------------------
-    Total                                      8.128ns (3.291ns logic, 4.837ns route)
-                                                       (40.5% logic, 59.5% route)
+    Total                                      6.701ns (3.199ns logic, 3.502ns route)
+                                                       (47.7% logic, 52.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     11.882ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_lightsdelay/count_4 (FF)
-  Destination:          Inst_controller/Inst_lightsdelay/count_21 (FF)
+Slack (setup path):     13.312ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_lightsdelay/count_3 (FF)
+  Destination:          Inst_controller/Inst_lightsdelay/count_6 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.110ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.008ns (0.049 - 0.057)
+  Data Path Delay:      6.686ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.002ns (0.001 - 0.003)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_4 to Inst_controller/Inst_lightsdelay/count_21
+  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_3 to Inst_controller/Inst_lightsdelay/count_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y57.YQ       Tcko                  0.567   Inst_controller/Inst_lightsdelay/count<5>
-                                                       Inst_controller/Inst_lightsdelay/count_4
-    SLICE_X3Y60.F2       net (fanout=2)        0.653   Inst_controller/Inst_lightsdelay/count<4>
-    SLICE_X3Y60.COUT     Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<2>1
+    SLICE_X12Y74.XQ      Tcko                  0.515   Inst_controller/Inst_lightsdelay/count<3>
+                                                       Inst_controller/Inst_lightsdelay/count_3
+    SLICE_X15Y77.G2      net (fanout=2)        0.631   Inst_controller/Inst_lightsdelay/count<3>
+    SLICE_X15Y77.COUT    Topcyg                0.871   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<1>1
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y79.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y79.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y82.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X15Y83.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y83.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.G1      net (fanout=3)        1.783   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.Y       Tilo                  0.612   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X22Y83.G1      net (fanout=3)        1.306   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X22Y83.Y       Tilo                  0.660   Inst_controller/Inst_lightsdelay/count_not0001
                                                        Inst_controller/Inst_lightsdelay/count_not00011
-    SLICE_X2Y64.CE       net (fanout=14)       2.486   Inst_controller/Inst_lightsdelay/count_not0001
-    SLICE_X2Y64.CLK      Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<21>
-                                                       Inst_controller/Inst_lightsdelay/count_21
+    SLICE_X12Y77.CE      net (fanout=14)       1.602   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X12Y77.CLK     Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<7>
+                                                       Inst_controller/Inst_lightsdelay/count_6
     -------------------------------------------------  ---------------------------
-    Total                                      8.110ns (3.188ns logic, 4.922ns route)
-                                                       (39.3% logic, 60.7% route)
+    Total                                      6.686ns (3.147ns logic, 3.539ns route)
+                                                       (47.1% logic, 52.9% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point Inst_controller/Inst_lightsdelay/count_20 (SLICE_X2Y64.CE), 63 paths
---------------------------------------------------------------------------------
-Slack (setup path):     11.846ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     13.325ns (requirement - (data path - clock path skew + uncertainty))
   Source:               Inst_controller/Inst_lightsdelay/count_1 (FF)
-  Destination:          Inst_controller/Inst_lightsdelay/count_20 (FF)
+  Destination:          Inst_controller/Inst_lightsdelay/count_6 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.144ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.010ns (0.049 - 0.059)
+  Data Path Delay:      6.673ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.002ns (0.001 - 0.003)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_1 to Inst_controller/Inst_lightsdelay/count_20
+  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_1 to Inst_controller/Inst_lightsdelay/count_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y55.XQ       Tcko                  0.515   Inst_controller/Inst_lightsdelay/count<1>
+    SLICE_X12Y75.XQ      Tcko                  0.515   Inst_controller/Inst_lightsdelay/count<1>
                                                        Inst_controller/Inst_lightsdelay/count_1
-    SLICE_X3Y59.F2       net (fanout=2)        0.636   Inst_controller/Inst_lightsdelay/count<1>
-    SLICE_X3Y59.COUT     Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y77.F1      net (fanout=2)        0.478   Inst_controller/Inst_lightsdelay/count<1>
+    SLICE_X15Y77.COUT    Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<0>1
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<0>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y78.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y79.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y79.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y82.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X15Y83.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y83.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.G1      net (fanout=3)        1.783   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.Y       Tilo                  0.612   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X22Y83.G1      net (fanout=3)        1.306   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X22Y83.Y       Tilo                  0.660   Inst_controller/Inst_lightsdelay/count_not0001
                                                        Inst_controller/Inst_lightsdelay/count_not00011
-    SLICE_X2Y64.CE       net (fanout=14)       2.486   Inst_controller/Inst_lightsdelay/count_not0001
-    SLICE_X2Y64.CLK      Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<21>
-                                                       Inst_controller/Inst_lightsdelay/count_20
+    SLICE_X12Y77.CE      net (fanout=14)       1.602   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X12Y77.CLK     Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<7>
+                                                       Inst_controller/Inst_lightsdelay/count_6
     -------------------------------------------------  ---------------------------
-    Total                                      8.144ns (3.239ns logic, 4.905ns route)
-                                                       (39.8% logic, 60.2% route)
+    Total                                      6.673ns (3.287ns logic, 3.386ns route)
+                                                       (49.3% logic, 50.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     11.862ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_lightsdelay/count_0 (FF)
-  Destination:          Inst_controller/Inst_lightsdelay/count_20 (FF)
+
+Paths for end point Inst_controller/Inst_lightsdelay/count_5 (SLICE_X14Y76.CE), 63 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.302ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_lightsdelay/count_2 (FF)
+  Destination:          Inst_controller/Inst_lightsdelay/count_5 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.128ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.010ns (0.049 - 0.059)
+  Data Path Delay:      6.691ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.007ns (0.013 - 0.020)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_0 to Inst_controller/Inst_lightsdelay/count_20
+  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_2 to Inst_controller/Inst_lightsdelay/count_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y55.YQ       Tcko                  0.567   Inst_controller/Inst_lightsdelay/count<1>
-                                                       Inst_controller/Inst_lightsdelay/count_0
-    SLICE_X3Y59.F3       net (fanout=2)        0.568   Inst_controller/Inst_lightsdelay/count<0>
-    SLICE_X3Y59.COUT     Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<0>1
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<0>
+    SLICE_X12Y74.YQ      Tcko                  0.567   Inst_controller/Inst_lightsdelay/count<3>
+                                                       Inst_controller/Inst_lightsdelay/count_2
+    SLICE_X15Y77.G4      net (fanout=2)        0.594   Inst_controller/Inst_lightsdelay/count<2>
+    SLICE_X15Y77.COUT    Topcyg                0.871   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<1>1
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y78.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y79.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y79.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y82.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X15Y83.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y83.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.G1      net (fanout=3)        1.783   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.Y       Tilo                  0.612   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X22Y83.G1      net (fanout=3)        1.306   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X22Y83.Y       Tilo                  0.660   Inst_controller/Inst_lightsdelay/count_not0001
                                                        Inst_controller/Inst_lightsdelay/count_not00011
-    SLICE_X2Y64.CE       net (fanout=14)       2.486   Inst_controller/Inst_lightsdelay/count_not0001
-    SLICE_X2Y64.CLK      Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<21>
-                                                       Inst_controller/Inst_lightsdelay/count_20
+    SLICE_X14Y76.CE      net (fanout=14)       1.592   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X14Y76.CLK     Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<5>
+                                                       Inst_controller/Inst_lightsdelay/count_5
     -------------------------------------------------  ---------------------------
-    Total                                      8.128ns (3.291ns logic, 4.837ns route)
-                                                       (40.5% logic, 59.5% route)
+    Total                                      6.691ns (3.199ns logic, 3.492ns route)
+                                                       (47.8% logic, 52.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     11.882ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_lightsdelay/count_4 (FF)
-  Destination:          Inst_controller/Inst_lightsdelay/count_20 (FF)
+Slack (setup path):     13.317ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_controller/Inst_lightsdelay/count_3 (FF)
+  Destination:          Inst_controller/Inst_lightsdelay/count_5 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.110ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.008ns (0.049 - 0.057)
+  Data Path Delay:      6.676ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.007ns (0.013 - 0.020)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_4 to Inst_controller/Inst_lightsdelay/count_20
+  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_3 to Inst_controller/Inst_lightsdelay/count_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y57.YQ       Tcko                  0.567   Inst_controller/Inst_lightsdelay/count<5>
-                                                       Inst_controller/Inst_lightsdelay/count_4
-    SLICE_X3Y60.F2       net (fanout=2)        0.653   Inst_controller/Inst_lightsdelay/count<4>
-    SLICE_X3Y60.COUT     Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<2>1
+    SLICE_X12Y74.XQ      Tcko                  0.515   Inst_controller/Inst_lightsdelay/count<3>
+                                                       Inst_controller/Inst_lightsdelay/count_3
+    SLICE_X15Y77.G2      net (fanout=2)        0.631   Inst_controller/Inst_lightsdelay/count<3>
+    SLICE_X15Y77.COUT    Topcyg                0.871   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<1>1
+                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y79.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y79.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y82.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X15Y83.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y83.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.G1      net (fanout=3)        1.783   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.Y       Tilo                  0.612   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X22Y83.G1      net (fanout=3)        1.306   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X22Y83.Y       Tilo                  0.660   Inst_controller/Inst_lightsdelay/count_not0001
                                                        Inst_controller/Inst_lightsdelay/count_not00011
-    SLICE_X2Y64.CE       net (fanout=14)       2.486   Inst_controller/Inst_lightsdelay/count_not0001
-    SLICE_X2Y64.CLK      Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<21>
-                                                       Inst_controller/Inst_lightsdelay/count_20
+    SLICE_X14Y76.CE      net (fanout=14)       1.592   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X14Y76.CLK     Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<5>
+                                                       Inst_controller/Inst_lightsdelay/count_5
     -------------------------------------------------  ---------------------------
-    Total                                      8.110ns (3.188ns logic, 4.922ns route)
-                                                       (39.3% logic, 60.7% route)
+    Total                                      6.676ns (3.147ns logic, 3.529ns route)
+                                                       (47.1% logic, 52.9% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point Inst_controller/Inst_lightsdelay/count_19 (SLICE_X0Y64.CE), 63 paths
---------------------------------------------------------------------------------
-Slack (setup path):     11.848ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     13.330ns (requirement - (data path - clock path skew + uncertainty))
   Source:               Inst_controller/Inst_lightsdelay/count_1 (FF)
-  Destination:          Inst_controller/Inst_lightsdelay/count_19 (FF)
+  Destination:          Inst_controller/Inst_lightsdelay/count_5 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.145ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.007ns (0.052 - 0.059)
+  Data Path Delay:      6.663ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.007ns (0.013 - 0.020)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_1 to Inst_controller/Inst_lightsdelay/count_19
+  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_1 to Inst_controller/Inst_lightsdelay/count_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y55.XQ       Tcko                  0.515   Inst_controller/Inst_lightsdelay/count<1>
+    SLICE_X12Y75.XQ      Tcko                  0.515   Inst_controller/Inst_lightsdelay/count<1>
                                                        Inst_controller/Inst_lightsdelay/count_1
-    SLICE_X3Y59.F2       net (fanout=2)        0.636   Inst_controller/Inst_lightsdelay/count<1>
-    SLICE_X3Y59.COUT     Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y77.F1      net (fanout=2)        0.478   Inst_controller/Inst_lightsdelay/count<1>
+    SLICE_X15Y77.COUT    Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<0>1
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<0>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y78.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
+    SLICE_X15Y78.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y79.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
+    SLICE_X15Y79.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y80.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
+    SLICE_X15Y80.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y81.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
+    SLICE_X15Y81.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y82.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
+    SLICE_X15Y82.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X15Y83.CIN     net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
+    SLICE_X15Y83.COUT    Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>
                                                        Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.G1      net (fanout=3)        1.783   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.Y       Tilo                  0.612   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X22Y83.G1      net (fanout=3)        1.306   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
+    SLICE_X22Y83.Y       Tilo                  0.660   Inst_controller/Inst_lightsdelay/count_not0001
                                                        Inst_controller/Inst_lightsdelay/count_not00011
-    SLICE_X0Y64.CE       net (fanout=14)       2.487   Inst_controller/Inst_lightsdelay/count_not0001
-    SLICE_X0Y64.CLK      Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<19>
-                                                       Inst_controller/Inst_lightsdelay/count_19
+    SLICE_X14Y76.CE      net (fanout=14)       1.592   Inst_controller/Inst_lightsdelay/count_not0001
+    SLICE_X14Y76.CLK     Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<5>
+                                                       Inst_controller/Inst_lightsdelay/count_5
     -------------------------------------------------  ---------------------------
-    Total                                      8.145ns (3.239ns logic, 4.906ns route)
-                                                       (39.8% logic, 60.2% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     11.864ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_lightsdelay/count_0 (FF)
-  Destination:          Inst_controller/Inst_lightsdelay/count_19 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      8.129ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.007ns (0.052 - 0.059)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_0 to Inst_controller/Inst_lightsdelay/count_19
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X0Y55.YQ       Tcko                  0.567   Inst_controller/Inst_lightsdelay/count<1>
-                                                       Inst_controller/Inst_lightsdelay/count_0
-    SLICE_X3Y59.F3       net (fanout=2)        0.568   Inst_controller/Inst_lightsdelay/count<0>
-    SLICE_X3Y59.COUT     Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<0>1
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<0>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<1>
-    SLICE_X3Y60.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.G1      net (fanout=3)        1.783   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.Y       Tilo                  0.612   Inst_controller/Inst_lightsdelay/count_not0001
-                                                       Inst_controller/Inst_lightsdelay/count_not00011
-    SLICE_X0Y64.CE       net (fanout=14)       2.487   Inst_controller/Inst_lightsdelay/count_not0001
-    SLICE_X0Y64.CLK      Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<19>
-                                                       Inst_controller/Inst_lightsdelay/count_19
-    -------------------------------------------------  ---------------------------
-    Total                                      8.129ns (3.291ns logic, 4.838ns route)
-                                                       (40.5% logic, 59.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     11.884ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_controller/Inst_lightsdelay/count_4 (FF)
-  Destination:          Inst_controller/Inst_lightsdelay/count_19 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      8.111ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.005ns (0.052 - 0.057)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: Inst_controller/Inst_lightsdelay/count_4 to Inst_controller/Inst_lightsdelay/count_19
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X0Y57.YQ       Tcko                  0.567   Inst_controller/Inst_lightsdelay/count<5>
-                                                       Inst_controller/Inst_lightsdelay/count_4
-    SLICE_X3Y60.F2       net (fanout=2)        0.653   Inst_controller/Inst_lightsdelay/count<4>
-    SLICE_X3Y60.COUT     Topcyf                1.011   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_lut<2>1
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<2>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<3>
-    SLICE_X3Y61.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<4>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<5>
-    SLICE_X3Y62.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<6>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<7>
-    SLICE_X3Y63.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<8>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<9>
-    SLICE_X3Y64.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<10>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.CIN      net (fanout=1)        0.000   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<11>
-    SLICE_X3Y65.COUT     Tbyp                  0.103   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<12>
-                                                       Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.G1      net (fanout=3)        1.783   Inst_controller/Inst_lightsdelay/Mcompar_count_cmp_eq0000_cy<13>
-    SLICE_X15Y72.Y       Tilo                  0.612   Inst_controller/Inst_lightsdelay/count_not0001
-                                                       Inst_controller/Inst_lightsdelay/count_not00011
-    SLICE_X0Y64.CE       net (fanout=14)       2.487   Inst_controller/Inst_lightsdelay/count_not0001
-    SLICE_X0Y64.CLK      Tceck                 0.483   Inst_controller/Inst_lightsdelay/count<19>
-                                                       Inst_controller/Inst_lightsdelay/count_19
-    -------------------------------------------------  ---------------------------
-    Total                                      8.111ns (3.188ns logic, 4.923ns route)
-                                                       (39.3% logic, 60.7% route)
+    Total                                      6.663ns (3.287ns logic, 3.376ns route)
+                                                       (49.3% logic, 50.7% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "CLK_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_controller/Inst_DC/Q (SLICE_X36Y77.F4), 1 path
+Paths for end point Inst_controller/Inst_DC/Q (SLICE_X37Y82.F4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.189ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      1.192ns (requirement - (clock path skew + uncertainty - data path))
   Source:               Inst_controller/Inst_DC/Q (FF)
   Destination:          Inst_controller/Inst_DC/Q (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.189ns (Levels of Logic = 1)
+  Data Path Delay:      1.192ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 20.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
@@ -562,53 +568,25 @@ Slack (hold path):      1.189ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X36Y77.XQ      Tcko                  0.412   Inst_controller/Inst_DC/Q
+    SLICE_X37Y82.XQ      Tcko                  0.411   Inst_controller/Inst_DC/Q
                                                        Inst_controller/Inst_DC/Q
-    SLICE_X36Y77.F4      net (fanout=5)        0.290   Inst_controller/Inst_DC/Q
-    SLICE_X36Y77.CLK     Tckf        (-Th)    -0.487   Inst_controller/Inst_DC/Q
+    SLICE_X37Y82.F4      net (fanout=5)        0.333   Inst_controller/Inst_DC/Q
+    SLICE_X37Y82.CLK     Tckf        (-Th)    -0.448   Inst_controller/Inst_DC/Q
                                                        Inst_controller/Dc27
                                                        Inst_controller/Inst_DC/Q
     -------------------------------------------------  ---------------------------
-    Total                                      1.189ns (0.899ns logic, 0.290ns route)
-                                                       (75.6% logic, 24.4% route)
+    Total                                      1.192ns (0.859ns logic, 0.333ns route)
+                                                       (72.1% logic, 27.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_controller/Inst_DA/Q (SLICE_X37Y74.F2), 1 path
+Paths for end point Inst_controller/Inst_lightsdelay/endtimer (SLICE_X23Y82.G4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.258ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               Inst_controller/Inst_DB/nQ (FF)
-  Destination:          Inst_controller/Inst_DA/Q (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      1.260ns (Levels of Logic = 1)
-  Clock Path Skew:      0.002ns (0.035 - 0.033)
-  Source Clock:         CLK_BUFGP rising at 20.000ns
-  Destination Clock:    CLK_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: Inst_controller/Inst_DB/nQ to Inst_controller/Inst_DA/Q
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X39Y74.YQ      Tcko                  0.409   Inst_controller/Inst_DB/nQ
-                                                       Inst_controller/Inst_DB/nQ
-    SLICE_X37Y74.F2      net (fanout=5)        0.403   Inst_controller/Inst_DB/nQ
-    SLICE_X37Y74.CLK     Tckf        (-Th)    -0.448   Inst_controller/Inst_DA/Q
-                                                       Inst_controller/Da491
-                                                       Inst_controller/Inst_DA/Q
-    -------------------------------------------------  ---------------------------
-    Total                                      1.260ns (0.857ns logic, 0.403ns route)
-                                                       (68.0% logic, 32.0% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point Inst_controller/Inst_lightsdelay/endtimer (SLICE_X15Y73.G1), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      1.342ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      1.229ns (requirement - (clock path skew + uncertainty - data path))
   Source:               Inst_controller/Inst_lightsdelay/endtimer (FF)
   Destination:          Inst_controller/Inst_lightsdelay/endtimer (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.342ns (Levels of Logic = 1)
+  Data Path Delay:      1.229ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 20.000ns
   Destination Clock:    CLK_BUFGP rising at 20.000ns
@@ -618,15 +596,43 @@ Slack (hold path):      1.342ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X15Y73.YQ      Tcko                  0.409   Inst_controller/Inst_lightsdelay/endtimer
+    SLICE_X23Y82.YQ      Tcko                  0.409   Inst_controller/Inst_lightsdelay/endtimer
                                                        Inst_controller/Inst_lightsdelay/endtimer
-    SLICE_X15Y73.G1      net (fanout=4)        0.485   Inst_controller/Inst_lightsdelay/endtimer
-    SLICE_X15Y73.CLK     Tckg        (-Th)    -0.448   Inst_controller/Inst_lightsdelay/endtimer
-                                                       Inst_controller/f61
+    SLICE_X23Y82.G4      net (fanout=4)        0.372   Inst_controller/Inst_lightsdelay/endtimer
+    SLICE_X23Y82.CLK     Tckg        (-Th)    -0.448   Inst_controller/Inst_lightsdelay/endtimer
+                                                       Inst_controller/f51
                                                        Inst_controller/Inst_lightsdelay/endtimer
     -------------------------------------------------  ---------------------------
-    Total                                      1.342ns (0.857ns logic, 0.485ns route)
-                                                       (63.9% logic, 36.1% route)
+    Total                                      1.229ns (0.857ns logic, 0.372ns route)
+                                                       (69.7% logic, 30.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_controller/Inst_DB/Q (SLICE_X39Y82.F1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.359ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_controller/Inst_DB/Q (FF)
+  Destination:          Inst_controller/Inst_DB/Q (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.359ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Inst_controller/Inst_DB/Q to Inst_controller/Inst_DB/Q
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y82.XQ      Tcko                  0.411   Inst_controller/Inst_DB/Q
+                                                       Inst_controller/Inst_DB/Q
+    SLICE_X39Y82.F1      net (fanout=8)        0.500   Inst_controller/Inst_DB/Q
+    SLICE_X39Y82.CLK     Tckf        (-Th)    -0.448   Inst_controller/Inst_DB/Q
+                                                       Inst_controller/Db521
+                                                       Inst_controller/Inst_DB/Q
+    -------------------------------------------------  ---------------------------
+    Total                                      1.359ns (0.859ns logic, 0.500ns route)
+                                                       (63.2% logic, 36.8% route)
 
 --------------------------------------------------------------------------------
 
@@ -638,25 +644,25 @@ Slack: 18.203ns (period - (min high pulse limit / (high pulse / period)))
   High pulse limit: 0.719ns (Tch)
   Physical resource: Inst_controller/Inst_delaytimer/endtimer/CLK
   Logical resource: Inst_controller/Inst_delaytimer/endtimer/CK
-  Location pin: SLICE_X44Y74.CLK
+  Location pin: SLICE_X44Y81.CLK
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.203ns (period - (min high pulse limit / (high pulse / period)))
   Period: 20.000ns
   High pulse: 8.000ns
   High pulse limit: 0.719ns (Tch)
-  Physical resource: Inst_controller/Inst_DB/Q/CLK
-  Logical resource: Inst_controller/Inst_DB/Q/CK
-  Location pin: SLICE_X38Y74.CLK
+  Physical resource: Inst_controller/Inst_delaytimer/count<5>/CLK
+  Logical resource: Inst_controller/Inst_delaytimer/count_5/CK
+  Location pin: SLICE_X52Y79.CLK
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.203ns (period - (min high pulse limit / (high pulse / period)))
   Period: 20.000ns
   High pulse: 8.000ns
   High pulse limit: 0.719ns (Tch)
-  Physical resource: Inst_controller/Inst_DC/Q/CLK
-  Logical resource: Inst_controller/Inst_DC/Q/CK
-  Location pin: SLICE_X36Y77.CLK
+  Physical resource: Inst_controller/Inst_delaytimer/count<5>/CLK
+  Logical resource: Inst_controller/Inst_delaytimer/count_4/CK
+  Location pin: SLICE_X52Y79.CLK
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
 
@@ -673,7 +679,7 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    8.154|         |         |         |
+CLK            |    6.703|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -685,13 +691,13 @@ Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 Constraints cover 6402 paths, 0 nets, and 528 connections
 
 Design statistics:
-   Minimum period:   8.154ns{1}   (Maximum frequency: 122.639MHz)
+   Minimum period:   6.703ns{1}   (Maximum frequency: 149.187MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sat Nov  9 21:50:09 2019 
+Analysis completed Fri Nov 15 18:43:44 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:

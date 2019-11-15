@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: HouseAlarm.prj
@@ -110,8 +110,7 @@ Slice Utilization Ratio Delta      : 5
 Compiling vhdl file "/home/ubuntu/git/suichin/HouseAlarm/dflipflop.vhd" in Library work.
 Architecture behavioral of Entity dflipflop is up to date.
 Compiling vhdl file "/home/ubuntu/git/suichin/HouseAlarm/timer.vhd" in Library work.
-Entity <timer> compiled.
-Entity <timer> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity timer is up to date.
 Compiling vhdl file "/home/ubuntu/git/suichin/HouseAlarm/systemcontroller.vhd" in Library work.
 Entity <systemcontroller> compiled.
 Entity <systemcontroller> (Architecture <behavioral>) compiled.
@@ -332,9 +331,9 @@ Cell Usage :
 #      LUT1                        : 81
 #      LUT2                        : 78
 #      LUT2_L                      : 2
-#      LUT3                        : 6
+#      LUT3                        : 7
 #      LUT3_D                      : 4
-#      LUT4                        : 28
+#      LUT4                        : 27
 #      LUT4_D                      : 1
 #      LUT4_L                      : 4
 #      MUXCY                       : 109
@@ -445,7 +444,7 @@ Delay:               6.162ns (Levels of Logic = 16)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 28 / 7
+  Total number of paths / destination ports: 26 / 7
 -------------------------------------------------------------------------
 Offset:              5.519ns (Levels of Logic = 4)
   Source:            switches<7> (PAD)
@@ -457,9 +456,9 @@ Offset:              5.519ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             4   1.106   0.651  switches_7_IBUF (switches_7_IBUF)
-     LUT4:I0->O            1   0.612   0.387  Inst_controller/Da15 (Inst_controller/Da15)
-     LUT3_D:I2->O          1   0.612   0.387  Inst_controller/Da17 (Inst_controller/Da17)
-     LUT4:I2->O            1   0.612   0.357  Inst_controller/Da49 (Inst_controller/Da)
+     LUT3:I0->O            1   0.612   0.387  Inst_controller/Da11 (Inst_controller/Da11)
+     LUT3_D:I2->O          1   0.612   0.387  Inst_controller/Da13 (Inst_controller/Da13)
+     LUT4:I2->O            1   0.612   0.357  Inst_controller/Da42 (Inst_controller/Da)
      FDR:R                     0.795          Inst_controller/Inst_DA/nQ
     ----------------------------------------
     Total                      5.519ns (3.737ns logic, 1.782ns route)
@@ -479,8 +478,8 @@ Offset:              7.229ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDS:C->Q              8   0.514   0.795  Inst_controller/Inst_DB/Q (Inst_controller/Inst_DB/Q)
-     LUT2:I0->O            3   0.612   0.454  Inst_controller/f5_SW1 (N6)
-     LUT4:I3->O           31   0.612   1.073  Inst_controller/f61 (LEDs_6_OBUF)
+     LUT2:I0->O            3   0.612   0.454  Inst_controller/f4_SW1 (N6)
+     LUT4:I3->O           31   0.612   1.073  Inst_controller/f51 (LEDs_6_OBUF)
      OBUF:I->O                 3.169          LEDs_6_OBUF (LEDs<6>)
     ----------------------------------------
     Total                      7.229ns (4.907ns logic, 2.322ns route)
@@ -507,13 +506,13 @@ Delay:               4.774ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.47 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.73 secs
  
 --> 
 
 
-Total memory usage is 532244 kilobytes
+Total memory usage is 532232 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   45 (   0 filtered)

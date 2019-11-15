@@ -92,3 +92,9 @@ map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o HouseAl
 par -w -intstyle ise -ol high -t 1 HouseAlarm_map.ncd HouseAlarm.ncd HouseAlarm.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml HouseAlarm.twx HouseAlarm.ncd -o HouseAlarm.twr HouseAlarm.pcf -ucf constraints.ucf 
 bitgen -intstyle ise -f HouseAlarm.ut HouseAlarm.ncd 
+xst -intstyle ise -ifn "/home/ubuntu/git/suichin/HouseAlarm/HouseAlarm.xst" -ofn "/home/ubuntu/git/suichin/HouseAlarm/HouseAlarm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 HouseAlarm.ngc HouseAlarm.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o HouseAlarm_map.ncd HouseAlarm.ngd HouseAlarm.pcf 
+par -w -intstyle ise -ol high -t 1 HouseAlarm_map.ncd HouseAlarm.ncd HouseAlarm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml HouseAlarm.twx HouseAlarm.ncd -o HouseAlarm.twr HouseAlarm.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f HouseAlarm.ut HouseAlarm.ncd 

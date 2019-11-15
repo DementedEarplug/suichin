@@ -56,88 +56,88 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">arm</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Inst_controller/Inst_delaytimer/endcount_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">HouseAlarm</arg>&gt;.
 </msg>
 
 </messages>

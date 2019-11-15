@@ -56,17 +56,17 @@ architecture Behavioral of systemcontroller is
     signal B : std_logic := '0';
     signal C : std_logic := '0';
     signal Da : std_logic;
-    signal An : std_logic := '0';
+    signal An : std_logic;
     signal Db : std_logic;
-    signal Bn : std_logic := '0';
+    signal Bn : std_logic;
     signal Dc : std_logic;
-    signal Cn : std_logic := '0';
+    signal Cn : std_logic;
     signal f1 : std_logic;
     signal f2 : std_logic; 
     signal f3 : std_logic;
     signal f4 : std_logic;
     signal f5 : std_logic;
-    signal f6 : std_logic;
+    
 	 
 	signal delaylimit  : std_logic_vector(27 downto 0) := "1110111001101011001010000000";
     
@@ -97,22 +97,19 @@ architecture Behavioral of systemcontroller is
 
 begin
     sensors <= (doors or windows);
-    f1 <= (arm and not sensors and not frontdoor);
+    f1 <= arm and not sensors;
 	 
-	  
-    f2 <= (not test and not sensors and arm);
-
+	 f2 <= (not test and not sensors and arm) or test or (not test and arm and sensors and frontdoor);
     f3 <= (not test  and arm and sensors);
-     f4 <= (B and Cn);
      
-    f5 <= (A and B and Cn) or (An and Bn and C);
-    --f4 <= arm  and (windows or doors) and not frontdoor;
-    --f5 <= not test and arm  and (windows  or doors ) and not frontdoor;
-    --f6 <= not test and arm  and (windows  or doors ) and frontdoor;
+     
+    f4 <= (A and B and Cn) or (An and Bn and C);
+    
 	 
-    Da <= (An and  Bn and Cn and f1 ) or (f4 and test) or (A and Bn  and not enddelay);
-    Db <= (A and enddelay) or (f2 and B  and Cn ) or (f4 and test) or (f4 and f3 and frontdoor) or (B  and C and not enddelay) or (A  and B );
-    Dc <= (An and C and arm) or (f3 and not frontdoor and An and B)  or (An and B and f3 and frontdoor) or (B and C);
+    Da <= (An and  Bn and Cn and f1 ) or (B and Cn and test) or (A and Bn  and not enddelay);
+    Db <= (A and enddelay) or (B  and Cn and f2 ) or (B  and C and not enddelay) or (A  and B );
+    Dc <= (An and C and arm) or (An and B and  f3) or (B and C);
+
 	 
 	 
     startdelay <= (A  and Bn  and Cn ) or  (An and B and C);
@@ -127,14 +124,14 @@ begin
     leds(1) <= B;
     leds(2) <= A;
 
-    sendsms <= f5;
-    bell <= f5;
+    sendsms <= f4;
+    bell <= f4;
     
 
     
 
    
-    leds(4) <= f5;
+    leds(4) <= f4;
     leds(5) <= test;
 
     Inst_DA : dflipflop port map(
@@ -167,15 +164,15 @@ begin
     );
 
     
-    f6 <= (f5 xor lightsendtimer)and f5;
+    f5 <= (f4 xor lightsendtimer)and f4;
 	 
     lights <= lightsendtimer;
      
-    leds(6) <= f6;
+    leds(6) <= f5;
 	 
     Inst_lightsdelay : timer port map(
         clk => clk,
-        Start => f6,
+        Start => f5,
         Timelimit => lightsdelay,
 		  Special => '1',
         Endtimer => lightsendtimer
